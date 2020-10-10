@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a4eec444-9433-45b1-88ec-0737291fa54c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ih8YNIui3oTctbX8YgPbqNHZ1E" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Sieve_of_Eratosthenes" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AnkaComp-Season-V" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algoritmalar I" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algoritmalar I/Sieve_of_Eratosthenes.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Sieve_of_Eratosthenes" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="WindowStateProjectService">
+    <state x="417" y="179" key="#Inspections" timestamp="1602349106773">
+      <screen x="0" y="0" width="1825" height="1027" />
+    </state>
+    <state x="417" y="179" key="#Inspections/0.0.1825.1027@0.0.1825.1027" timestamp="1602349106773" />
+    <state width="1367" height="336" key="GridCell.Tab.0.bottom" timestamp="1602350867898">
+      <screen x="0" y="0" width="1825" height="1027" />
+    </state>
+    <state width="1367" height="336" key="GridCell.Tab.0.bottom/0.0.1825.1027@0.0.1825.1027" timestamp="1602350867898" />
+    <state width="1367" height="336" key="GridCell.Tab.0.center" timestamp="1602350867898">
+      <screen x="0" y="0" width="1825" height="1027" />
+    </state>
+    <state width="1367" height="336" key="GridCell.Tab.0.center/0.0.1825.1027@0.0.1825.1027" timestamp="1602350867898" />
+    <state width="1367" height="336" key="GridCell.Tab.0.left" timestamp="1602350867898">
+      <screen x="0" y="0" width="1825" height="1027" />
+    </state>
+    <state width="1367" height="336" key="GridCell.Tab.0.left/0.0.1825.1027@0.0.1825.1027" timestamp="1602350867898" />
+    <state width="1367" height="336" key="GridCell.Tab.0.right" timestamp="1602350867898">
+      <screen x="0" y="0" width="1825" height="1027" />
+    </state>
+    <state width="1367" height="336" key="GridCell.Tab.0.right/0.0.1825.1027@0.0.1825.1027" timestamp="1602350867898" />
+    <state width="1367" height="336" key="GridCell.Tab.1.bottom" timestamp="1602350867898">
+      <screen x="0" y="0" width="1825" height="1027" />
+    </state>
+    <state width="1367" height="336" key="GridCell.Tab.1.bottom/0.0.1825.1027@0.0.1825.1027" timestamp="1602350867898" />
+    <state width="1367" height="336" key="GridCell.Tab.1.center" timestamp="1602350867898">
+      <screen x="0" y="0" width="1825" height="1027" />
+    </state>
+    <state width="1367" height="336" key="GridCell.Tab.1.center/0.0.1825.1027@0.0.1825.1027" timestamp="1602350867898" />
+    <state width="1367" height="336" key="GridCell.Tab.1.left" timestamp="1602350867898">
+      <screen x="0" y="0" width="1825" height="1027" />
+    </state>
+    <state width="1367" height="336" key="GridCell.Tab.1.left/0.0.1825.1027@0.0.1825.1027" timestamp="1602350867898" />
+    <state width="1367" height="336" key="GridCell.Tab.1.right" timestamp="1602350867898">
+      <screen x="0" y="0" width="1825" height="1027" />
+    </state>
+    <state width="1367" height="336" key="GridCell.Tab.1.right/0.0.1825.1027@0.0.1825.1027" timestamp="1602350867898" />
+    <state x="300" y="146" key="SettingsEditor" timestamp="1602350446002">
+      <screen x="0" y="0" width="1825" height="1027" />
+    </state>
+    <state x="300" y="146" key="SettingsEditor/0.0.1825.1027@0.0.1825.1027" timestamp="1602350446001" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

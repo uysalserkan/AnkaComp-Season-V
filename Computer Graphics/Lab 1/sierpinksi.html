@@ -3,21 +3,13 @@
 <body>
     <canvas id="glcanvas" width="512" height="512"></canvas>
 </body>
-<script>
-    main();
-    function main() {
-        const canvas = document.querySelector("#glcanvas");
-
-        const gl = canvas.getContext("webgl");
-
-        if (!gl) {
-            alert("Unable to initialize WebGL. Your browser or machine may not support.");
-            return;
-        }
-
-        gl.clearColor(.0, .0, .0, 1.0);
-        gl.clear(gl.COLOR_BUFFER_BIT);
+<script src="sierpinksi.js"></script>
+<script id="vertex-shader" type="x-shader/x-vertex">
+    attribute vec4 vPosition;
+    void main(){
+        gl_Position = vPosition;
     }
+
 </script>
 
 </html>

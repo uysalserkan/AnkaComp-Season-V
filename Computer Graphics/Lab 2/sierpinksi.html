@@ -6,6 +6,7 @@
 <script id="vertex-shader" type="x-shader/x-vertex">
     attribute vec4 vPosition;
     void main(){
+        gl_PointSize = 2.0;
         gl_Position = vPosition;
     }
 
@@ -17,6 +18,7 @@ void main(){
 }
 </script>
 <script src="initShaders.js"></script>
+<script src="MV.js"></script>
 <script src="sierpinksi.js"></script>
 
 </html>

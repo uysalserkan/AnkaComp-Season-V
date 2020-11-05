@@ -1,4 +1,5 @@
 var gl;
+var numPoints = 5000;
 
 window.onload = function init() {
   const canvas = document.querySelector("#glcanvas"); // Initialize the GL context.
@@ -17,11 +18,22 @@ window.onload = function init() {
 
   gl.useProgram(program);
 
-  var vertices = new Float32Array([-1, -1, 1, -1, 0, 1]);
+  // new triangles
+  var vertices = [vec2(-1.0, -1.0), vec2(0.0, 1.0), vec2(1.0, -1.0)];
+  var u = scale(0.5, add(vertices[0], vertices[1]));
+  var v = scale(0.5, add(vertices[0], vertices[2]));
+  var p = scale(0.5, add(u, v));
+  points = [p];
+
+  for (var i = 1; i < numPoints; ++i) {
+    var j = Math.floor(Math.random() * 3);
+    p = scale(0.5, add(points[i - 1], vertices[j]));
+    points.push(p);
+  }
 
   var bufferId = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, bufferId);
-  gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
+  gl.bufferData(gl.ARRAY_BUFFER, flatten(points), gl.STATIC_DRAW);
 
   // Associate out shader variables with our data buffer
   var vPosition = gl.getAttribLocation(program, "vPosition");
@@ -36,5 +48,5 @@ window.onload = function init() {
 function render() {
   gl.clear(gl.COLOR_BUFFER_BIT); // clear the color buffer with specified clear color
 
-  gl.drawArrays(gl.TRIANGLES, 0, 3);
+  gl.drawArrays(gl.POINTS, 0, numPoints);
 }

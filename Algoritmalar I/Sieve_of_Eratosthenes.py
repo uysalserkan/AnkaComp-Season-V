@@ -3,6 +3,7 @@
 
 from math import floor
 from math import sqrt
+import time
 
 
 def s_of_eratosthenes(range_) -> list:
@@ -41,4 +42,7 @@ def s_of_eratosthenes(range_) -> list:
 
 
 if __name__ == "__main__":
-    print(s_of_eratosthenes(100000))
+    start = time.time()
+    print(s_of_eratosthenes(300000))
+    end = time.time()
+    print("[300.000] The speed of time is:", end - start)  # 69.09s

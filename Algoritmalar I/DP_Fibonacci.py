@@ -11,7 +11,7 @@ def fib(n):
     return result
 
 
-# Memoized Solution
+# Memorized Solution
 def fib_(n, mem):
     if mem[n] != None:
         return mem[n]

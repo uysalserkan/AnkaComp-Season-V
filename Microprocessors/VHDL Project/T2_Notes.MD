@@ -7,9 +7,10 @@ Eğer hiç `wait` fonksiyonunu kullanmazsak program **begin** ve **end process**
 **Syntax**
 ```VHDL 
     wait for <time_value> <time_unit>;
+ ```
 
 | **time_unit** | *Açıklaması* |
-| :------------ | ------------ |
+| :------------- | ------------ |
 | fs            | femto saniye |
 | ps            | piko saniye  |
 | ns            | nano saniye  |

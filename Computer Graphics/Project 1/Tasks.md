@@ -23,7 +23,7 @@
 
 # Yapılacaklar
 
-[ ] 800x600 boyutunda rengi koyu mavi olan bir kanvas oluşturulacak.
-[ ] TabBar'lar kullanılarak 2 ayrı bölme olacak ve TabBarlar ile her bir karaktere ayrı erişim sağlanacak.
-[ ] Belirli sayıda renk paleti bulunacak.
-[ ] Alt bar tasarımı değişebilir.
+* [ ] 800x600 boyutunda rengi koyu mavi olan bir kanvas oluşturulacak.
+* [ ] TabBar'lar kullanılarak 2 ayrı bölme olacak ve TabBarlar ile her bir karaktere ayrı erişim sağlanacak.
+* [ ] Belirli sayıda renk paleti bulunacak.
+* [ ] Alt bar tasarımı değişebilir.

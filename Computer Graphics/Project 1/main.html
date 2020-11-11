@@ -1,14 +1,33 @@
 <html>
 
 <body>
-    <canvas id="glcanvas" width="800" height="640">
+    <canvas id="projectCanvas" width="800" height="640">
         <!-- bu mesaj eğer aktif olan tarayıcı HTML5 desteklemeze gözükür.-->
         SORRY YOUR WEB BORWSER DOES NOT SUPPORT HTML5'S CANVAS ELEMENTS. PLEASE CHANGE YOUR CURRENT WEB BROWSER.
     </canvas>
 </body>
 
 
-<!--Libraries included.-->
+<script id="vertex-shader" type="x-shader/x-vertex">
+    attribute vec4 vPosition;
+    void main(){
+        gl_Position = vPosition;
+    }
+
+</script>
+<script id="fragment-shader" type="x-shader/x-fragment">
+    precision mediump float;
+    void main(){
+        gl_FragColor = vec4(0.2, 0.0, 0.0, 1.0);
+    }
+</script>
+
+
+
+<!-----Libraries included.-->
+
+<script src="libs/initShaders.js"></script>
+<script src="libs/project1.js"></script>
 <script src="libs/initShaders.js"></script>
 <script src="libs/MV.js"></script>
 <script src="libs/webgl-utils.js"></script>

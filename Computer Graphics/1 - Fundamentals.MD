@@ -268,4 +268,119 @@ Count değerimizin 3 olma nedeni; 3 tane koordinat noktamızı sırasıyla `a_po
 
 Vertex Shader'imiz positionBuffer'den değerleri gl_Position'a kopyalar ve üçgen çizilmiş olur. (`gl.TRIANGLES`)
 
-### ilk kodda bırakıldı.
+`gl_Position`'u pixellere göre ayarlamak için;
+
+```HTML
+<script id="vertex-shader-2d" type="notjs">
+
+  // attribute vec4 a_position; Eski hali böyleydi.
+  attribute vec2 a_position;
+
+  uniform vec2 u_resolution;
+
+  void main() {
+    // convert the position from pixels to 0.0 to 1.0
+    vec2 zeroToOne = a_position / u_resolution;
+
+    // convert from 0->1 to 0->2
+    vec2 zeroToTwo = zeroToOne * 2.0;
+
+    // convert from 0->2 to -1->+1 (clip space)
+    vec2 clipSpace = zeroToTwo - 1.0;
+
+    gl_Position = vec4(clipSpace, 0, 1);
+  }
+
+</script>
+```
+
+Sonraki aşama olarak bir tane `uniform` değişkenini scriptimizde bulunan `u_resolution` değişkenine atıyoruz.
+
+```JS
+var resolutionUniformLocation = gl.getUniformLocation(program, "u_resolution");
+```
+
+`u_resolution` değişkenini ayarladığımız için artık -1 den +1 e kadar atama yapmak yerine direkt olarak pixel yerlerini belirtebiliriz.
+
+```JS
+var positions = [
+  10, 20,
+  80, 20,
+  10, 30,
+  10, 30,
+  80, 20,
+  80, 30,
+];
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
+```
+
+Datamızın yerlerini belirledikten sonra ekran ayarlarını yapıyoruz fakat bundan önce programımızı *GPU* ile kullanmalıyız;
+
+```JS
+gl.useProgram(program);
+ 
+...
+ 
+// Çözünürlük ayarlarını yapıyoruz.
+gl.uniform2f(resolutionUniformLocation, gl.canvas.width, gl.canvas.height);
+```
+
+Bir tane dikdörtgen çizeceğimiz için `count` değişkenini değiştiriyoruz (çünkü 2 tane üçgenden oluşturacağız.);
+
+```JS
+var primitiveType = gl.TRIANGLES;
+var offset = 0;
+var count = 6;
+gl.drawArrays(primitiveType, offset, count);
+```
+
+### Rastgelen oluşturulan 50 tane dikdörtgen kodu
+
+```JS
+var colorUniformLocation = gl.getUniformLocation(program, "u_color");
+  ...
+
+  // draw 50 random rectangles in random colors
+  for (var ii = 0; ii < 50; ++ii) {
+    // Setup a random rectangle
+    // This will write to positionBuffer because
+    // its the last thing we bound on the ARRAY_BUFFER
+    // bind point
+    setRectangle(
+        gl, randomInt(300), randomInt(300), randomInt(300), randomInt(300));
+
+    // Set a random color.
+    gl.uniform4f(colorUniformLocation, Math.random(), Math.random(), Math.random(), 1);
+
+    // Draw the rectangle.
+    gl.drawArrays(gl.TRIANGLES, 0, 6);
+  }
+}
+
+// Returns a random integer from 0 to range - 1.
+function randomInt(range) {
+  return Math.floor(Math.random() * range);
+}
+
+// Fills the buffer with the values that define a rectangle.
+
+function setRectangle(gl, x, y, width, height) {
+  var x1 = x;
+  var x2 = x + width;
+  var y1 = y;
+  var y2 = y + height;
+
+  // NOTE: gl.bufferData(gl.ARRAY_BUFFER, ...) will affect
+  // whatever buffer is bound to the `ARRAY_BUFFER` bind point
+  // but so far we only have one buffer. If we had more than one
+  // buffer we'd want to bind that buffer to `ARRAY_BUFFER` first.
+
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
+     x1, y1,
+     x2, y1,
+     x1, y2,
+     x1, y2,
+     x2, y1,
+     x2, y2]), gl.STATIC_DRAW);
+}
+```

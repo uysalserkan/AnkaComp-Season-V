@@ -27,7 +27,7 @@ window.onload = function init() {
 
 // Global Variables
 var gl;
-var vertices;
+var vertices = [];
 
 window.onload = function main() {
   const canvas = document.querySelector("#projectCanvas"); // Main HTML'den canvasa ulaşıyoruz.
@@ -46,92 +46,153 @@ window.onload = function main() {
   gl.useProgram(program);
   // Gl değişkenine atanır veya kullandırılır.
 
-  vertices = new Float32Array([
-    -0.08, // S-U-1-x1
-    0.98, // S-U-1-y1
-    -0.98, // S-U-1-x2
-    0.98, // S-U-1-y2
-    -0.08, // S-U-1-x3
-    0.88, // S-U-1-y3
-    // 2. kısım
-    -0.98, // S-U-2-x1
-    0.98, // S-U-2-y1
-    -0.08, // S-U-2-x2
-    0.88, // S-U-2-y2
-    -0.98, // S-U-2-x3
-    0.88, // S-U-2-y3
+  vertices = [
+    vec2(
+      -0.08, // S-U-1-x1
+      0.98 // S-U-1-y1
+    ),
+    vec2(
+      -0.98, // S-U-1-x2
+      0.98 // S-U-1-y2
+    ),
+    vec2(
+      -0.08, // S-U-1-x3
+      0.88 // S-U-1-y3
+    ),
+    // 2. Kısım
+    vec2(
+      -0.98, // S-U-2-x1
+      0.98 // S-U-2-y1
+    ),
+    vec2(
+      -0.08, // S-U-2-x2
+      0.88 // S-U-2-y2
+    ),
+    vec2(
+      -0.98, // S-U-2-x3
+      0.88 // S-U-2-y3
+    ),
 
-    // ^Ust yatay dikdörtgen oluşturuldu
+    // ^Üst Yatay Dikdörtgen Tamamlandı.
 
-    -0.98, // S-SOL-1-x1
-    0.88, // S-SOL-1-y1
-    -0.98, // S-SOL-1-x2
-    0.28, // S-SOL-1-y2
-    -0.78, // S-SOL-1-x3
-    0.28, // S-SOL-1-y3
+    vec2(
+      -0.98, // S-SOL-1-x1
+      0.88 // S-SOL-1-y1
+    ),
+    vec2(
+      -0.98, // S-SOL-1-x2
+      0.28 // S-SOL-1-y2
+    ),
+    vec2(
+      -0.78, // S-SOL-1-x3
+      0.28 // S-SOL-1-y3
+    ),
     // 2. kısım
-    -0.78, // S-SOL-2-x1
-    0.28, // S-SOL-2-y1
-    -0.98, // S-SOL-2-x2
-    0.88, // S-SOL-2-y2
-    -0.78, // S-SOL-2-x3
-    0.88, // S-SOL-2-y3
+    vec2(
+      -0.78, // S-SOL-2-x1
+      0.28 // S-SOL-2-y1
+    ),
+    vec2(
+      -0.98, // S-SOL-2-x2
+      0.88 // S-SOL-2-y2
+    ),
+    vec2(
+      -0.78, // S-SOL-2-x3
+      0.88 // S-SOL-2-y3
+    ),
 
     // ^Ust Sol dikey dikdörtgen oluşturuldu.
 
-    -0.98, // S-O-1-x1
-    0.28, // S-O-1-y1
-    -0.98, // S-O-1-x2
-    0.18, // S-O-1-y2
-    -0.08, // S-O-1-x3
-    0.18, // S-O-1-y3
+    vec2(
+      -0.98, // S-O-1-x1
+      0.28 // S-O-1-y1
+    ),
+    vec2(
+      -0.98, // S-O-1-x2
+      0.18 // S-O-1-y2
+    ),
+    vec2(
+      -0.08, // S-O-1-x3
+      0.18 // S-O-1-y3
+    ),
     // 2. kısım
-    -0.08, // S-O-2-x1
-    0.18, // S-O-2-y1
-    -0.08, // S-O-2-x2
-    0.28, // S-O-2-y2
-    -0.98, // S-O-2-x3
-    0.28, // S-O-2-y3
+    vec2(
+      -0.08, // S-O-2-x1
+      0.18 // S-O-2-y1
+    ),
+    vec2(
+      -0.08, // S-O-2-x2
+      0.28 // S-O-2-y2
+    ),
+    vec2(
+      -0.98, // S-O-2-x3
+      0.28 // S-O-2-y3
+    ),
 
     // ^Orta yatay dikdörtgen oluşturuldu.
 
-    -0.08, //S-SAG-1-x1
-    0.18, //S-SAG-1-y1
-    -0.28, //S-SAG-1-x2
-    0.18, //S-SAG-1-y2
-    -0.08, //S-SAG-1-x3
-    -0.48, //S-SAG-1-y3
+    vec2(
+      -0.08, //S-SAG-1-x1
+      0.18
+    ), //S-SAG-1-y1
+    vec2(
+      -0.28, // S-SAG-1-x2
+      0.18 // S-SAG-1-y2
+    ),
+    vec2(
+      -0.08, // S-SAG-1-x3
+      -0.48 // S-SAG-1-y3
+    ),
     // 2. kısım
-    -0.08, //S-SAG-2-x1
-    -0.48, //S-SAG-2-y1
-    -0.28, // S-SAG-2-x2
-    -0.48, // S-SAG-2-y2
-    -0.28, // S-SAG-2-x3
-    0.18, // S-SAG-2-y3
+    vec2(
+      -0.08, // S-SAG-2-x1
+      -0.48 // S-SAG-2-y1
+    ),
+    vec2(
+      -0.28, // S-SAG-2-x2
+      -0.48 // S-SAG-2-y2
+    ),
+    vec2(
+      -0.28, // S-SAG-2-x3
+      0.18 // S-SAG-2-y3
+    ),
 
     // ^Sağ Alt diket dikdörtgen oluşturuldu.
 
-    -0.08, // S-A-1-x1
-    -0.48, // S-A-1-y1
-    -0.08, // S-A-1-x2
-    -0.58, // S-A-1-y2
-    -0.98, // S-A-1-x3
-    -0.58, // S-A-1-y3
+    vec2(
+      -0.08, // S-A-1-x1
+      -0.48 // S-A-1-y1
+    ),
+    vec2(
+      -0.08, // S-A-1-x2
+      -0.58 // S-A-1-y2
+    ),
+    vec2(
+      -0.98, // S-A-1-x3
+      -0.58 // S-A-1-y3
+    ),
 
     // 2. kısım
 
-    -0.98,
-    -0.58,
-    -0.98,
-    -0.48,
-    -0.08,
-    -0.48,
-  ]); //new Float32Array([0.1, 0.15, 0.9, 0.15, 0.9, 0.9]);
-  // Noktaların çizileceği eksenler girilir.
+    vec2(
+      -0.98, // S-A-1-x1
+      -0.58 // S-A-1-y1
+    ),
+    vec2(
+      -0.98, // S-A-1-x1
+      -0.48 // S-A-1-y2
+    ),
+    vec2(
+      -0.08, // S-A-1-x1
+      -0.48 // S-A-1-y3
+    ),
+
+    // ^Alt Yatay Dikdörtgen tamamlandı.
+  ];
 
   var bufferId = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, bufferId);
-  gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
+  gl.bufferData(gl.ARRAY_BUFFER, flatten(vertices), gl.STATIC_DRAW);
   // Eksenler buffer'a atanır, işlendikten sonra buradan çekilir.
 
   // Associate out shader variables with our data buffer
@@ -146,5 +207,5 @@ window.onload = function main() {
 function render() {
   gl.clear(gl.COLOR_BUFFER_BIT); // clear the color buffer with specified clear color
 
-  gl.drawArrays(gl.TRIANGLES, 0, 30);
+  gl.drawArrays(gl.TRIANGLES, 0, vertices.length);
 }

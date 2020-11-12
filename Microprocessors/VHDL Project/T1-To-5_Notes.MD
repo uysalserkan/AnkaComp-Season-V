@@ -61,3 +61,24 @@ Burada bulunan `<c>` değişkenin adını temsil eder, `<r>` ise bizim aralığ�
 * *`9 downto 0`*: 9'dan 0'a kadar birer birer azalarak devam eder.
 * *`0 to 0`*: Sadece 0'ı içeren aralık.
 * *`0 to -1`*: Boş aralık vermek istediğimizde kullanırız.
+
+## Tutorial 5
+
+### **while loop Syntax**
+
+```VHDL
+while <condition> loop
+end loop;
+```
+
+`<condition>` bölümü `true` veya `false` olabilir. Yazacağımız kontrol edilecek statement şöyle türlerde olabilir.
+
+| İlişkisel Operatörler         | Mantıksal Operatörler                                     |
+| ----------------------------- | --------------------------------------------------------- |
+| `=` : Equal                   | `not a`: true if *a* is **false**                         |
+| `/=` : Not Equal              | `a and b`: true if *a* and *b* are **true**               |
+| `<` : Less Than               | `a or b`: true if *a* or *b* are **true**                 |
+| `<=` : Less Than or Equal     | `a nand b`: true if *a* or *b* is **false**               |
+| `>` : Greather Than           | `a nor b`: true if *a* and *b* are **false**              |
+| `>=` : Greather Than or Equal | `a xor b`: true if exactly one of *a* or *b* are **true** |
+| ` `                           | `xa xnor b`: true if *a* and *b* are **equal**            |

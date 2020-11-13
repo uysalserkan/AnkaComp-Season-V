@@ -6,13 +6,17 @@ var letterProgram;
 
 var rotate_slider;
 var repositionSlider_X;
+var repositionSlider_Y;
+
+var scaleSliderX;
+var scaleSliderY;
 
 var vColorLoc;
 var myLettersColor = [Math.random(), Math.random(), Math.random(), 1];
 
 var degree;
-var trans;
-var scale;
+var trans = [0, 0];
+var scale = [1, 1];
 
 var degreeLoc;
 var transLoc;
@@ -40,8 +44,14 @@ function isPressed() {
   console.log("Pressed, isRotate status: ", isRotate);
 }
 
-function reposition_x_fn() {
+function reposition_fn() {
   console.log("Range X degistirildi. Yeni degeri:", repositionSlider_X.value);
+  console.log("Range Y degistirildi. Yeni degeri:", repositionSlider_Y.value);
+}
+
+function scale_fn() {
+  console.log("Range X degistirildi. Yeni degeri:", scaleSliderX.value);
+  console.log("Range Y degistirildi. Yeni degeri:", scaleSliderY.value);
 }
 
 window.onload = function main() {
@@ -64,21 +74,18 @@ window.onload = function main() {
   vColorLoc = gl.getUniformLocation(letterProgram, "vColor");
 
   repositionSlider_X = document.getElementById("reposition_x");
-  repositionSlider_X.addEventListener("change", reposition_x_fn);
+  repositionSlider_X.addEventListener("change", reposition_fn);
+
+  repositionSlider_Y = document.getElementById("reposition_y");
+  repositionSlider_Y.addEventListener("change", reposition_fn);
+
+  scaleSliderX = document.getElementById("scale_x");
+  scaleSliderY = document.getElementById("scale_y");
+
+  scaleSliderX.addEventListener("change", scale_fn);
+  scaleSliderY.addEventListener("change", scale_fn);
 
   // Gl değişkenine atanır veya kullandırılır.
-
-  // letterProgram.vertexPositionAttribute = gl.getAttribLocation(
-  //   letterProgram,
-  //   "vPosition"
-  // );
-  // gl.enableVertexAttribArray(letterProgram.vertexPositionAttribute);
-
-  // letterProgram.vertexColorAttribute = gl.getAttribLocation(
-  //   letterProgram,
-  //   "aVertexColor"
-  // );
-  // gl.enableVertexAttribArray(letterProgram.vertexColorAttribute);
 
   sLetter_position = [
     vec2(
@@ -249,8 +256,6 @@ window.onload = function main() {
     vec2(0.3, -0.58),
   ];
 
-  // uLetter_position = [vec2(1, 1), vec2(0, 0), vec2(1, -1),];
-
   var bufferId = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, bufferId);
   gl.bufferData(gl.ARRAY_BUFFER, flatten(sLetter_position), gl.STATIC_DRAW);
@@ -262,55 +267,15 @@ window.onload = function main() {
   gl.vertexAttribPointer(vPosition, 2, gl.FLOAT, false, 0, 0);
   gl.enableVertexAttribArray(vPosition);
 
-  //deişti
-  // colorBuffer = gl.createBuffer();
-  // gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
-
-  // myColor = [
-  //   1.0,
-  //   0.0,
-  //   0.0,
-  //   1.0,
-  //   0.0,
-  //   1.0,
-  //   0.0,
-  //   1.0,
-  //   0.0,
-  //   1.0,
-  //   0.0,
-  //   1.0,
-  //   0.0,
-  //   0.0,
-  //   1.0,
-  //   1.0,
-  // ];
-  // var vColor = gl.getAttribLocation(letterProgram, "aVertexColor");
-  // gl.vertexAttribPointer(vColor, 3, gl.FLOAT, false, 0, 0);
-  // gl.enableVertexAttribArray(vColor);
-  // gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(myColor), gl.STATIC_DRAW);
-
-  // gl.drawArrays(gl.TRIANGLES, 0, sLetter_position.length);
-
-  // var secondBuffer = gl.createBuffer();
-  // gl.bindBuffer(gl.ARRAY_BUFFER, secondBuffer);
-  // gl.bufferData(gl.ARRAY_BUFFER, flatten(uLetter_position), gl.STATIC_DRAW);
-
-  // var ULetter = gl.getAttribLocation(program, "ULetter");
-  // gl.vertexAttribPointer(ULetter, 2, gl.FLOAT, false, 0, 0);
-  // gl.enableVertexAttribArray(ULetter);
-  // gl.drawArrays(gl.TRIANGLES, 0, uLetter_position.length);
-
   degreeLoc = gl.getUniformLocation(letterProgram, "theta");
   transLoc = gl.getUniformLocation(letterProgram, "transformation");
   scaleLoc = gl.getUniformLocation(letterProgram, "scale");
 
   degree = 0;
-  trans = (1, 1, 0);
-  scale = (1, 1, 0);
 
   gl.uniform1f(degreeLoc, degree);
-  gl.uniform4f(transLoc, 0.5, 0.5, 0.0, 0.0);
-  gl.uniform4f(scaleLoc, 0.5, 0.5, 0.0, 0.0);
+  gl.uniform4f(transLoc, trans[0], trans[1], 0.0, 0.0);
+  gl.uniform4f(scaleLoc, scale[0], scale[1], 0.0, 0.0);
 
   gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
 
@@ -327,6 +292,15 @@ function render() {
       : -(rotate_slider.value - rotate_slider.min) /
         (rotate_slider.max - rotate_slider.min);
   gl.uniform1f(degreeLoc, degree);
+
+  trans[0] = repositionSlider_X.value;
+  trans[1] = repositionSlider_Y.value;
+  gl.uniform4f(transLoc, trans[0], trans[1], 0, 0);
+
+  scale[0] = scaleSliderX.value == 0 ? 0.1 : scaleSliderX.value;
+  scale[1] = scaleSliderY.value == 0 ? 0.1 : scaleSliderY.value;
+
+  gl.uniform4f(scaleLoc, scale[0], scale[1], 0, 0);
 
   gl.uniform4fv(vColorLoc, myLettersColor);
 

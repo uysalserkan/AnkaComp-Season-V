@@ -5,9 +5,18 @@ var uLetter_position = [];
 var letterProgram;
 
 var rotate_slider;
+var repositionSlider_X;
+
+var vColorLoc;
+var myLettersColor = [Math.random(), Math.random(), Math.random(), 1];
 
 var degree;
+var trans;
+var scale;
+
 var degreeLoc;
+var transLoc;
+var scaleLoc;
 
 var isRotate = false;
 
@@ -31,6 +40,10 @@ function isPressed() {
   console.log("Pressed, isRotate status: ", isRotate);
 }
 
+function reposition_x_fn() {
+  console.log("Range X degistirildi. Yeni degeri:", repositionSlider_X.value);
+}
+
 window.onload = function main() {
   const canvas = document.querySelector("#projectCanvas"); // Main HTML'den canvasa ulaşıyoruz.
 
@@ -46,6 +59,12 @@ window.onload = function main() {
   stopButton.addEventListener("click", isPressed);
 
   rotate_slider = document.getElementById("rotate_slider");
+
+  // Harf rengi
+  vColorLoc = gl.getUniformLocation(letterProgram, "vColor");
+
+  repositionSlider_X = document.getElementById("reposition_x");
+  repositionSlider_X.addEventListener("change", reposition_x_fn);
 
   // Gl değişkenine atanır veya kullandırılır.
 
@@ -64,142 +83,145 @@ window.onload = function main() {
   sLetter_position = [
     vec2(
       -0.08, // S-U-1-x1
-      0.98 // S-U-1-y1
+      0.58 // S-U-1-y1
     ),
     vec2(
-      -0.98, // S-U-1-x2
-      0.98 // S-U-1-y2
+      -0.58, // S-U-1-x2
+      0.58 // S-U-1-y2
     ),
     vec2(
       -0.08, // S-U-1-x3
-      0.88 // S-U-1-y3
+      0.43 // S-U-1-y3
     ),
     // 2. Kısım
     vec2(
-      -0.98, // S-U-2-x1
-      0.98 // S-U-2-y1
+      -0.58, // S-U-2-x1
+      0.58 // S-U-2-y1
     ),
     vec2(
       -0.08, // S-U-2-x2
-      0.88 // S-U-2-y2
+      0.43 // S-U-2-y2
     ),
     vec2(
-      -0.98, // S-U-2-x3
-      0.88 // S-U-2-y3
+      -0.58, // S-U-2-x3
+      0.43 // S-U-2-y3
     ),
 
     // ^Üst Yatay Dikdörtgen Tamamlandı.
 
     vec2(
-      -0.98, // S-SOL-1-x1
-      0.88 // S-SOL-1-y1
+      -0.58, // S-SOL-1-x1
+      0.58 // S-SOL-1-y1
     ),
     vec2(
-      -0.98, // S-SOL-1-x2
-      0.28 // S-SOL-1-y2
+      -0.58, // S-SOL-1-x2
+      0.08 // S-SOL-1-y2
     ),
     vec2(
-      -0.78, // S-SOL-1-x3
-      0.28 // S-SOL-1-y3
+      -0.73, // S-SOL-1-x3
+      0.08 // S-SOL-1-y3
     ),
+
     // 2. kısım
     vec2(
-      -0.78, // S-SOL-2-x1
-      0.28 // S-SOL-2-y1
+      -0.73, // S-SOL-2-x1
+      0.08 // S-SOL-2-y1
     ),
     vec2(
-      -0.98, // S-SOL-2-x2
-      0.88 // S-SOL-2-y2
+      -0.58, // S-SOL-2-x2
+      0.58 // S-SOL-2-y2
     ),
     vec2(
-      -0.78, // S-SOL-2-x3
-      0.88 // S-SOL-2-y3
+      -0.73, // S-SOL-2-x3
+      0.58 // S-SOL-2-y3
     ),
 
     // ^Ust Sol dikey dikdörtgen oluşturuldu.
 
     vec2(
-      -0.98, // S-O-1-x1
-      0.28 // S-O-1-y1
+      -0.73, // S-O-1-x1
+      0.08 // S-O-1-y1
     ),
     vec2(
-      -0.98, // S-O-1-x2
-      0.18 // S-O-1-y2
+      -0.73, // S-O-1-x2
+      -0.07 // S-O-1-y2
     ),
     vec2(
       -0.08, // S-O-1-x3
-      0.18 // S-O-1-y3
+      -0.07 // S-O-1-y3
     ),
+
     // 2. kısım
     vec2(
       -0.08, // S-O-2-x1
-      0.18 // S-O-2-y1
+      -0.07 // S-O-2-y1
     ),
     vec2(
       -0.08, // S-O-2-x2
-      0.28 // S-O-2-y2
+      0.08 // S-O-2-y2
     ),
     vec2(
-      -0.98, // S-O-2-x3
-      0.28 // S-O-2-y3
+      -0.73, // S-O-2-x3
+      0.08 // S-O-2-y3
     ),
 
     // ^Orta yatay dikdörtgen oluşturuldu.
 
     vec2(
       -0.08, //S-SAG-1-x1
-      0.18
+      0.08
     ), //S-SAG-1-y1
     vec2(
-      -0.28, // S-SAG-1-x2
-      0.18 // S-SAG-1-y2
+      -0.23, // S-SAG-1-x2
+      0.08 // S-SAG-1-y2
     ),
     vec2(
       -0.08, // S-SAG-1-x3
       -0.48 // S-SAG-1-y3
     ),
+
     // 2. kısım
     vec2(
       -0.08, // S-SAG-2-x1
       -0.48 // S-SAG-2-y1
     ),
     vec2(
-      -0.28, // S-SAG-2-x2
+      -0.23, // S-SAG-2-x2
       -0.48 // S-SAG-2-y2
     ),
     vec2(
-      -0.28, // S-SAG-2-x3
-      0.18 // S-SAG-2-y3
+      -0.23, // S-SAG-2-x3
+      0.08 // S-SAG-2-y3
     ),
 
     // ^Sağ Alt diket dikdörtgen oluşturuldu.
 
     vec2(
       -0.08, // S-A-1-x1
-      -0.48 // S-A-1-y1
+      -0.43 // S-A-1-y1
     ),
     vec2(
       -0.08, // S-A-1-x2
       -0.58 // S-A-1-y2
     ),
     vec2(
-      -0.98, // S-A-1-x3
+      -0.73, // S-A-1-x3
       -0.58 // S-A-1-y3
     ),
 
     // 2. kısım
 
     vec2(
-      -0.98, // S-A-1-x1
+      -0.73, // S-A-1-x1
       -0.58 // S-A-1-y1
     ),
     vec2(
-      -0.98, // S-A-1-x1
-      -0.48 // S-A-1-y2
+      -0.73, // S-A-1-x1
+      -0.43 // S-A-1-y2
     ),
     vec2(
       -0.08, // S-A-1-x1
-      -0.48 // S-A-1-y3
+      -0.43 // S-A-1-y3
     ),
 
     // ^Alt Yatay Dikdörtgen tamamlandı.
@@ -279,10 +301,16 @@ window.onload = function main() {
   // gl.drawArrays(gl.TRIANGLES, 0, uLetter_position.length);
 
   degreeLoc = gl.getUniformLocation(letterProgram, "theta");
+  transLoc = gl.getUniformLocation(letterProgram, "transformation");
+  scaleLoc = gl.getUniformLocation(letterProgram, "scale");
 
   degree = 0;
+  trans = (1, 1, 0);
+  scale = (1, 1, 0);
 
   gl.uniform1f(degreeLoc, degree);
+  gl.uniform4f(transLoc, 0.5, 0.5, 0.0, 0.0);
+  gl.uniform4f(scaleLoc, 0.5, 0.5, 0.0, 0.0);
 
   gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
 
@@ -296,8 +324,11 @@ function render() {
     isRotate == true
       ? (rotate_slider.value - rotate_slider.min) /
         (rotate_slider.max - rotate_slider.min)
-      : 0;
+      : -(rotate_slider.value - rotate_slider.min) /
+        (rotate_slider.max - rotate_slider.min);
   gl.uniform1f(degreeLoc, degree);
+
+  gl.uniform4fv(vColorLoc, myLettersColor);
 
   gl.drawArrays(
     gl.TRIANGLES,

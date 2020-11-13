@@ -12,6 +12,7 @@
         <h3>Rotation:</h3>
         </p>
         <button id="durdur_bnt" ,>CHANGE DIR</button>
+        <button id="start_stop">PLAY / STOP</button>
         <p> </p>
         <label for="rotate_slider">Degree Value</label>
         <input type="range" min="-1" max="1" value="-1" class="slider" width="25px" name="rotation_slider" step="0.1"
@@ -45,33 +46,22 @@
             </p>
         </h3>
         <select name="Cars" id="color_palatte" size="7">
-            <option > CHARCOAL </option> 
-            <option > PERSIAN GREEN </option>
-            <option > ORANGE YELLOW CRAYOLA </option>
-            <option > SANDY BROWN </option>
-            <option > BURNT SIENNA</option>
-            <option > BABY POWER </option>
-            <option > ROSE MADDER </option>
-            <option > PURPLE</option>
-            <option > GRAY </option>
-            <option > CYAN </option>
-            <option > LIME </option>
+            <option> CHARCOAL </option>
+            <option> PERSIAN GREEN </option>
+            <option> ORANGE YELLOW CRAYOLA </option>
+            <option> SANDY BROWN </option>
+            <option> BURNT SIENNA</option>
+            <option> BABY POWER </option>
+            <option> ROSE MADDER </option>
+            <option> PURPLE</option>
+            <option> GRAY </option>
+            <option> CYAN </option>
+            <option> LIME </option>
         </select>
 
     </div>
 
 </body>
-<!-- 
-    CHARCOAL : 38, 70, 83
-    PERSIAN GREEN: 42, 157, 143
-    ORANGE YELLOW CRAYOLA: 233, 196, 106
-    SANDY BROWN: 244, 162, 97
-    BURNT SIENNA: 231, 111, 81
-    BABY POWER: 253, 255, 252
-    ROSE MADDER: 231, 29, 54
-
-
- -->
 
 <script id="vertex-shader" type="x-shader/x-vertex">
     attribute vec4 vPosition;

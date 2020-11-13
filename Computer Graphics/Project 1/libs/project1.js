@@ -24,6 +24,8 @@ var scaleLoc;
 
 var isRotate = false;
 
+var play = false;
+
 var colorPalatte;
 
 function initGL(canvas) {
@@ -80,21 +82,11 @@ function get_color_name_fn() {
   }
   if (colorPalatte.selectedIndex == 10) {
     myLettersColor = [0 / 255, 230 / 255, 64 / 255, 1];
-
   }
-  /* 
-  "38, 70, 83,1" 
-  "42, 157, 143,1" 
-  "233, 196, 106,1" 
-  "244, 162, 97,1" 
-  "231, 111, 81,1" 
-  "253, 255, 252,1"
-  "231/255, 29/255, 54/255,1"
-  "148/255, 0/255, 211/255, 1"
-  "46/255, 49/255, 49/255, 1"
-  "25/255, 181/255, 254/255, 1"
-  "0/255, 230/255, 64/255, 1" 
-  */
+}
+
+function play_pause_fn() {
+  play = !play;
 }
 
 function reposition_fn() {
@@ -120,6 +112,9 @@ window.onload = function main() {
 
   var stopButton = document.getElementById("durdur_bnt");
   stopButton.addEventListener("click", isPressed);
+
+  var playButton = document.getElementById("start_stop");
+  playButton.addEventListener("click", play_pause_fn);
 
   rotate_slider = document.getElementById("rotate_slider");
 
@@ -330,8 +325,8 @@ window.onload = function main() {
   degree = 0;
 
   gl.uniform1f(degreeLoc, degree);
-  gl.uniform4f(transLoc, trans[0], trans[1], 0.0, 0.0);
-  gl.uniform4f(scaleLoc, scale[0], scale[1], 0.0, 0.0);
+  gl.uniform4f(transLoc, trans[0], trans[1], 1.0, 1.0);
+  gl.uniform4f(scaleLoc, scale[0], scale[1], 1.0, 1.0);
 
   gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
 
@@ -342,21 +337,23 @@ function render() {
   gl.clear(gl.COLOR_BUFFER_BIT); // clear the color buffer with specified clear color
 
   degree +=
-    isRotate == true
-      ? (rotate_slider.value - rotate_slider.min) /
-        (rotate_slider.max - rotate_slider.min)
-      : -(rotate_slider.value - rotate_slider.min) /
-        (rotate_slider.max - rotate_slider.min);
+    play == true
+      ? isRotate == true
+        ? (rotate_slider.value - rotate_slider.min) /
+          (rotate_slider.max - rotate_slider.min)
+        : -(rotate_slider.value - rotate_slider.min) /
+          (rotate_slider.max - rotate_slider.min)
+      : 0;
   gl.uniform1f(degreeLoc, degree);
 
   trans[0] = repositionSlider_X.value;
   trans[1] = repositionSlider_Y.value;
-  gl.uniform4f(transLoc, trans[0], trans[1], 0, 0);
+  gl.uniform4f(transLoc, trans[0], trans[1], 1.0, 1.0);
 
   scale[0] = scaleSliderX.value == 0 ? 0.1 : scaleSliderX.value;
   scale[1] = scaleSliderY.value == 0 ? 0.1 : scaleSliderY.value;
 
-  gl.uniform4f(scaleLoc, scale[0], scale[1], 0, 0);
+  gl.uniform4f(scaleLoc, scale[0], scale[1], 1.0, 1.0);
 
   gl.uniform4fv(vColorLoc, myLettersColor);
 

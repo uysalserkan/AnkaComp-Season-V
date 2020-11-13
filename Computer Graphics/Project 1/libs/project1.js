@@ -24,6 +24,8 @@ var scaleLoc;
 
 var isRotate = false;
 
+var colorPalatte;
+
 function initGL(canvas) {
   try {
     gl = canvas.getContext("webgl"); // WebGL kütüphanesini yüklüyoruz.
@@ -42,6 +44,57 @@ function initGL(canvas) {
 function isPressed() {
   isRotate = !isRotate;
   console.log("Pressed, isRotate status: ", isRotate);
+}
+
+function get_color_name_fn() {
+  console.log("Seçilen Index: ", colorPalatte.selectedIndex);
+  if (colorPalatte.selectedIndex == 0) {
+    myLettersColor = [38 / 255, 70 / 255, 83 / 255, 1];
+  }
+  if (colorPalatte.selectedIndex == 1) {
+    myLettersColor = [42 / 255, 157 / 255, 143 / 255, 1];
+  }
+  if (colorPalatte.selectedIndex == 2) {
+    myLettersColor = [233 / 255, 196 / 255, 106 / 255, 1];
+  }
+  if (colorPalatte.selectedIndex == 3) {
+    myLettersColor = [244 / 255, 162 / 255, 97 / 255, 1];
+  }
+  if (colorPalatte.selectedIndex == 4) {
+    myLettersColor = [231 / 255, 111 / 255, 81 / 255, 1];
+  }
+  if (colorPalatte.selectedIndex == 5) {
+    myLettersColor = [253 / 255, 255 / 255, 252 / 255, 1];
+  }
+  if (colorPalatte.selectedIndex == 6) {
+    myLettersColor = [231 / 255, 29 / 255, 54 / 255, 1];
+  }
+  if (colorPalatte.selectedIndex == 7) {
+    myLettersColor = [148 / 255, 0 / 255, 211 / 255, 1];
+  }
+  if (colorPalatte.selectedIndex == 8) {
+    myLettersColor = [46 / 255, 49 / 255, 49 / 255, 1];
+  }
+  if (colorPalatte.selectedIndex == 9) {
+    myLettersColor = [0 / 255, 255 / 255, 255 / 255, 1];
+  }
+  if (colorPalatte.selectedIndex == 10) {
+    myLettersColor = [0 / 255, 230 / 255, 64 / 255, 1];
+
+  }
+  /* 
+  "38, 70, 83,1" 
+  "42, 157, 143,1" 
+  "233, 196, 106,1" 
+  "244, 162, 97,1" 
+  "231, 111, 81,1" 
+  "253, 255, 252,1"
+  "231/255, 29/255, 54/255,1"
+  "148/255, 0/255, 211/255, 1"
+  "46/255, 49/255, 49/255, 1"
+  "25/255, 181/255, 254/255, 1"
+  "0/255, 230/255, 64/255, 1" 
+  */
 }
 
 function reposition_fn() {
@@ -84,6 +137,9 @@ window.onload = function main() {
 
   scaleSliderX.addEventListener("change", scale_fn);
   scaleSliderY.addEventListener("change", scale_fn);
+
+  colorPalatte = document.getElementById("color_palatte");
+  colorPalatte.addEventListener("change", get_color_name_fn);
 
   // Gl değişkenine atanır veya kullandırılır.
 

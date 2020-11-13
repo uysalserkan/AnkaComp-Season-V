@@ -7,40 +7,71 @@
         <!-- bu mesaj eğer aktif olan tarayıcı HTML5 desteklemeze gözükür.-->
         SORRY YOUR WEB BORWSER DOES NOT SUPPORT HTML5'S CANVAS ELEMENTS. PLEASE CHANGE YOUR CURRENT WEB BROWSER.
     </canvas>
-    <p>
-    <h3>Rotation:</h3>
-    </p>
-    <div class="slidecontainer1">
+    <div class="slidecontainer1" style="position: fixed; left: 15;">
+        <p>
+        <h3>Rotation:</h3>
+        </p>
         <button id="durdur_bnt" ,>CHANGE DIR</button>
         <p> </p>
         <label for="rotate_slider">Degree Value</label>
         <input type="range" min="-1" max="1" value="-1" class="slider" width="25px" name="rotation_slider" step="0.1"
             id="rotate_slider">
     </div>
-    <p>
-    <h3>Reposition:</h3>
-    </p>
-    <div class="slidecontainer2">
+    <div class="slidecontainer2" style="position: fixed; left: 300;">
+        <p>
+        <h3>Reposition:</h3>
+        </p>
         <label>X Axis</label>
         <input type="range" min="-1" max="1" value="0" class="slider" width="25px" step="0.1" id="reposition_x">
         <p> </p>
         <label>Y Axis</label>
         <input type="range" min="-1" max="1" value="0" class="slider" width="25px" step="0.1" id="reposition_y">
     </div>
-    <h3>
-        <p>Scale:</p>
-    </h3>
-    <div class="slidecontainer3">
+    <div class="slidecontainer3" style="position: fixed; left: 500;">
+        <h3>
+            <b>Scale:</b>
+        </h3>
         <label>X Axis</label>
-        <input type="range" min="-1" max="1" value="1" class="slider" width="25px" step="0.1" id="scale_x">
+        <input type="range" min="-2" max="2" value="1" class="slider" width="25px" step="0.1" id="scale_x">
         <p> </p>
         <label>Y Axis</label>
-        <input type="range" min="-1" max="1" value="1" class="slider" width="25px" name="Y Axis" step="0.1"
+        <input type="range" min="-2" max="2" value="1" class="slider" width="25px" name="Y Axis" step="0.1"
             id="scale_y">
+    </div>
+    <div class="colorContainer" style="position: fixed; left: 700;">
+        <h3>
+            <p>
+                Color Palatte
+            </p>
+        </h3>
+        <select name="Cars" id="color_palatte" size="7">
+            <option > CHARCOAL </option> 
+            <option > PERSIAN GREEN </option>
+            <option > ORANGE YELLOW CRAYOLA </option>
+            <option > SANDY BROWN </option>
+            <option > BURNT SIENNA</option>
+            <option > BABY POWER </option>
+            <option > ROSE MADDER </option>
+            <option > PURPLE</option>
+            <option > GRAY </option>
+            <option > CYAN </option>
+            <option > LIME </option>
+        </select>
+
     </div>
 
 </body>
+<!-- 
+    CHARCOAL : 38, 70, 83
+    PERSIAN GREEN: 42, 157, 143
+    ORANGE YELLOW CRAYOLA: 233, 196, 106
+    SANDY BROWN: 244, 162, 97
+    BURNT SIENNA: 231, 111, 81
+    BABY POWER: 253, 255, 252
+    ROSE MADDER: 231, 29, 54
 
+
+ -->
 
 <script id="vertex-shader" type="x-shader/x-vertex">
     attribute vec4 vPosition;

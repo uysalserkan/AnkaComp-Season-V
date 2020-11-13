@@ -1,24 +1,72 @@
 <html>
 
 <body>
+    <title>17290066 Project 1 Submission</title>
+    <h1>Serkan UYSAL</h1>
     <canvas id="projectCanvas" width="800" height="640">
         <!-- bu mesaj eğer aktif olan tarayıcı HTML5 desteklemeze gözükür.-->
         SORRY YOUR WEB BORWSER DOES NOT SUPPORT HTML5'S CANVAS ELEMENTS. PLEASE CHANGE YOUR CURRENT WEB BROWSER.
     </canvas>
+    <p>
+    <h3>Rotation:</h3>
+    </p>
+    <div class="slidecontainer1">
+        <button id="durdur_bnt" ,>STOP / PLAY</button>
+        <p> </p>
+        <label for="rotate_slider">Degree Value</label>
+        <input type="range" min="-1" max="1" value="0" class="slider" width="25px" name="rotation_slider" step="0.1"
+            id="rotate_slider">
+    </div>
+    <p>
+    <h3>Reposition:</h3>
+    </p>
+    <div class="slidecontainer2">
+        <label>X Axis</label>
+        <input type="range" min="-1" max="1" value="0" class="slider" width="25px" step="0.1" id="reposition_x">
+        <p> </p>
+        <label>Y Axis</label>
+        <input type="range" min="-1" max="1" value="0" class="slider" width="25px" step="0.1" id="reposition_y">
+    </div>
+    <h3>
+        <p>Scale:</p>
+    </h3>
+    <div class="slidecontainer3">
+        <label>X Axis</label>
+        <input type="range" min="-1" max="1" value="0" class="slider" width="25px" step="0.1" id="scale_x">
+        <p> </p>
+        <label>Y Axis</label>
+        <input type="range" min="-1" max="1" value="0" class="slider" width="25px" name="Y Axis" step="0.1"
+            id="scale_y">
+    </div>
+
 </body>
 
 
 <script id="vertex-shader" type="x-shader/x-vertex">
     attribute vec4 vPosition;
+    attribute vec4 aVertexColor;
+
+    uniform float theta;
+    uniform mat4 SLetter;
+    uniform mat4 LLetter;
+
+    varying vec4 vColor;
+
     void main(){
-        gl_Position = vPosition;
+        gl_Position.x = cos(theta) * vPosition.x - sin(theta) * vPosition.y;
+        gl_Position.y = sin(theta) * vPosition.x + cos(theta) * vPosition.y;
+        gl_Position.z = 0.0;
+        gl_Position.w = 1.0;
+        vColor = aVertexColor;
     }
 
 </script>
 <script id="fragment-shader" type="x-shader/x-fragment">
     precision mediump float;
+
+    varying vec4 vColor;
     void main(){
-        gl_FragColor = vec4(0.8, 0.0, 0.0, 1.0);
+        gl_FragColor = vColor;
     }
 </script>
 
@@ -27,9 +75,9 @@
 <!-----Libraries included.-->
 
 <script src="libs/initShaders.js"></script>
-<script src="libs/project1.js"></script>
-<script src="libs/initShaders.js"></script>
 <script src="libs/MV.js"></script>
-<script src="libs/webgl-utils.js"></script>
+<!-- <script src="libs/webgl-utils.js"></script> -->
+<!-- En son kendi Kütüphanemizi eklemek zorundayız. -->
+<script src="libs/project1.js"></script>
 
 </html>

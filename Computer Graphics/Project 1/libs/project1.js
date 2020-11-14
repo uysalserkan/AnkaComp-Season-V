@@ -1,33 +1,39 @@
 // Global Variables
 var gl;
 var sLetter_position = [];
-var uLetter_position = [];
 var letterProgram;
 
+// HTML'den gelen Slider değerleri için oluşturulan variableler.
 var rotate_slider;
 var repositionSlider_X;
 var repositionSlider_Y;
-
 var scaleSliderX;
 var scaleSliderY;
 
-var vColorLoc;
-var myLettersColor = [Math.random(), Math.random(), Math.random(), 1];
+// Listemizin içeridği değerlere ve methodlara ulaşıyoruz.
+var colorPalatte;
 
+// Varying tipinde olan renk değişkenimiz.
+var vColorLoc;
+var myLettersColor = [Math.random(), Math.random(), Math.random(), 1]; // Ilk rengimizi random atıyoruz.
+
+// Değiştirilecek olan değerlerimiz. Default olacak ilk tamalarını yapıyoruz.
 var degree;
 var trans = [0, 0];
 var scale = [1, 1];
 
+// HTML'den gelen uniform lokasyonları
 var degreeLoc;
 var transLoc;
 var scaleLoc;
 
+// Sağa mı sola mı döneceğini ayarlıyoruz.
 var isRotate = false;
 
+// Durdur başlat seçeneğimiz.
 var play = false;
 
-var colorPalatte;
-
+// Canvası alarak initialize ediyoruz.
 function initGL(canvas) {
   try {
     gl = canvas.getContext("webgl"); // WebGL kütüphanesini yüklüyoruz.
@@ -43,11 +49,13 @@ function initGL(canvas) {
   }
 }
 
+// Sadece çıktıları kontrol etmek için yazıldı.
 function isPressed() {
   isRotate = !isRotate;
-  console.log("Pressed, isRotate status: ", isRotate);
+  console.log("Pressed, isRotate status (clock rotation): ", isRotate);
 }
 
+// Değiştirilen rengi algılamak için oluşturuldu. Index numarasına göre değerleri myLettersColor değişkenine atadık.
 function get_color_name_fn() {
   console.log("Seçilen Index: ", colorPalatte.selectedIndex);
   if (colorPalatte.selectedIndex == 0) {
@@ -85,15 +93,19 @@ function get_color_name_fn() {
   }
 }
 
+// Döndürme işlemiş durduruldu.
 function play_pause_fn() {
   play = !play;
+  console.log("Rotation", play == true ? "Başlatıldı" : "Durduruldu", ".");
 }
 
+// Sadece çıktıları kontrol etmek için yazıldı.
 function reposition_fn() {
   console.log("Range X degistirildi. Yeni degeri:", repositionSlider_X.value);
   console.log("Range Y degistirildi. Yeni degeri:", repositionSlider_Y.value);
 }
 
+// Sadece çıktıları kontrol etmek için yazıldı.
 function scale_fn() {
   console.log("Range X degistirildi. Yeni degeri:", scaleSliderX.value);
   console.log("Range Y degistirildi. Yeni degeri:", scaleSliderY.value);
@@ -136,8 +148,7 @@ window.onload = function main() {
   colorPalatte = document.getElementById("color_palatte");
   colorPalatte.addEventListener("change", get_color_name_fn);
 
-  // Gl değişkenine atanır veya kullandırılır.
-
+  // S ve L harfi için oluşturulan değişken. 150 Vertex değil yaklaşık 150 satır.
   sLetter_position = [
     vec2(
       -0.08, // S-U-1-x1
@@ -310,20 +321,20 @@ window.onload = function main() {
   var bufferId = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, bufferId);
   gl.bufferData(gl.ARRAY_BUFFER, flatten(sLetter_position), gl.STATIC_DRAW);
-
   // Eksenler buffer'a atanır, işlendikten sonra buradan çekilir.
 
-  // Associate out shader variables with our data buffer
   var vPosition = gl.getAttribLocation(letterProgram, "vPosition");
   gl.vertexAttribPointer(vPosition, 2, gl.FLOAT, false, 0, 0);
   gl.enableVertexAttribArray(vPosition);
 
+  // Değişkenler HTML dosyasından alındı.
   degreeLoc = gl.getUniformLocation(letterProgram, "theta");
   transLoc = gl.getUniformLocation(letterProgram, "transformation");
   scaleLoc = gl.getUniformLocation(letterProgram, "scale");
 
   degree = 0;
 
+  // Değişkenlere değerleri atandı.
   gl.uniform1f(degreeLoc, degree);
   gl.uniform4f(transLoc, trans[0], trans[1], 1.0, 1.0);
   gl.uniform4f(scaleLoc, scale[0], scale[1], 1.0, 1.0);
@@ -357,10 +368,6 @@ function render() {
 
   gl.uniform4fv(vColorLoc, myLettersColor);
 
-  gl.drawArrays(
-    gl.TRIANGLES,
-    0,
-    sLetter_position.length + uLetter_position.length
-  );
+  gl.drawArrays(gl.TRIANGLES, 0, sLetter_position.length);
   requestAnimationFrame(render);
 }

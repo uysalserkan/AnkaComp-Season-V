@@ -76,10 +76,10 @@
     void main(){
         vec4 position = vPosition * scale;
         vec4 rotated = vec4(
-            position.x = (cos(theta) * position.x - sin(theta) * position.y),
-            position.y = (sin(theta) * position.x + cos(theta) * position.y) ,
-            position.z = 0.0,
-            position.w = 1.0
+            (cos(theta) * position.x - sin(theta) * position.y),
+            (sin(theta) * position.x + cos(theta) * position.y) ,
+            0.0,
+            1.0
             );
         vec4 translated = rotated + transformation;
         gl_Position = translated;

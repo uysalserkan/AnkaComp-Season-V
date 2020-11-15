@@ -133,6 +133,28 @@ window.onload = function main() {
   // Harf rengi
   vColorLoc = gl.getUniformLocation(letterProgram, "vColor");
 
+  document.addEventListener("keydown", function (event) {
+    if (event.keyCode == 82) {
+      console.log("R tuşuna basıldı ve rast gele renk atandı.");
+      myLettersColor = [Math.random(), Math.random(), Math.random(), 1.0];
+    }
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.keyCode == 32) {
+      console.log("Space tuşuna basıldı ve döndürme işlem durumu:", !play);
+      play = !play;
+    }
+  });
+  document.addEventListener("keydown", function (event) {
+    if (event.keyCode == 67) {
+      console.log(
+        "C tuşuna basıldı ve yers yöne döndürme işlem durumu:",
+        !isRotate
+      );
+      isRotate = !isRotate;
+    }
+  });
+
   repositionSlider_X = document.getElementById("reposition_x");
   repositionSlider_X.addEventListener("change", reposition_fn);
 

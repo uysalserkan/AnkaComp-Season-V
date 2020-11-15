@@ -128,6 +128,13 @@ window.onload = function main() {
   var playButton = document.getElementById("start_stop");
   playButton.addEventListener("click", play_pause_fn);
 
+  document.getElementById("set_left").addEventListener("click", function () {
+    degree = degree - 0.1;
+  });
+  document.getElementById("set_right").addEventListener("click", function () {
+    degree = degree + 0.1;
+  });
+
   rotate_slider = document.getElementById("rotate_slider");
 
   // Harf rengi

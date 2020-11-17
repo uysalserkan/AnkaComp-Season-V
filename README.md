@@ -12,6 +12,9 @@
 
 ### Chapter 2
 
-* [ ] Video 6
-* [ ] Video 7
-* [ ] Video 8
+* [x] Video 6
+* [x] Video 7
+* [x] Video 8
+* [x] Video 9
+* [ ] Video 10
+* [ ] Video 11

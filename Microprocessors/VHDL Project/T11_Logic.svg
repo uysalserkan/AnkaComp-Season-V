@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 311.6 292.3" style="enable-background:new 0 0 311.6 292.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FCD71E;}
+	.st1{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st2{font-family:'DroidSansMono';}
+	.st3{font-size:12px;}
+</style>
+<rect x="221.3" y="256.1" class="st0" width="28" height="15.8"/>
+<rect x="26.1" y="225.7" class="st0" width="28" height="15.8"/>
+<rect x="53.8" y="195.2" class="st0" width="28" height="15.8"/>
+<rect x="81.7" y="164.7" class="st0" width="28" height="15.8"/>
+<rect x="109.7" y="134.3" class="st0" width="28" height="15.8"/>
+<rect x="137.7" y="103.8" class="st0" width="28" height="15.8"/>
+<rect x="165.6" y="73.4" class="st0" width="28" height="15.8"/>
+<rect x="193.6" y="43" class="st0" width="28" height="15.8"/>
+<g>
+	<g>
+		<path class="st1" d="M233.8,28.2c-4.6,5.8-13.9,6.9-13.9,6.9c0,0-3.4,0.5-6.4,1.9"/>
+		<g>
+			<polygon points="208.9,42.5 212.8,32.4 214.1,36.9 218.7,38 			"/>
+		</g>
+	</g>
+</g>
+<rect x="221.6" y="12.4" class="st0" width="27.4" height="15.8"/>
+<text transform="matrix(1 0 0 1 148.5853 24.6439)" class="st2 st3">0</text>
+<g>
+	<line class="st1" x1="221.6" y1="12" x2="221.6" y2="28.9"/>
+</g>
+<g>
+	<line class="st1" x1="193.6" y1="12" x2="193.6" y2="28.9"/>
+</g>
+<g>
+	<line class="st1" x1="165.6" y1="12" x2="165.6" y2="28.9"/>
+</g>
+<g>
+	<line class="st1" x1="137.7" y1="12" x2="137.7" y2="28.9"/>
+</g>
+<g>
+	<line class="st1" x1="109.7" y1="12" x2="109.7" y2="28.9"/>
+</g>
+<g>
+	<line class="st1" x1="81.7" y1="12" x2="81.7" y2="28.9"/>
+</g>
+<g>
+	<line class="st1" x1="53.8" y1="12" x2="53.8" y2="28.9"/>
+</g>
+<text transform="matrix(1 0 0 1 36.7173 24.6436)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 232.4862 24.6436)" class="st2 st3">1</text>
+<text transform="matrix(1 0 0 1 204.519 24.6439)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 176.5521 24.6436)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 120.6181 24.6436)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 92.6512 24.6436)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 64.6842 24.6436)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 271.5 23.9474)" class="st2 st3">0 ns</text>
+<text transform="matrix(1 0 0 1 265.3438 54.3998)" class="st2 st3">10 ns</text>
+<text transform="matrix(1 0 0 1 265.3438 84.852)" class="st2 st3">20 ns</text>
+<text transform="matrix(1 0 0 1 265.3438 115.3044)" class="st2 st3">30 ns</text>
+<text transform="matrix(1 0 0 1 265.3438 145.7568)" class="st2 st3">40 ns</text>
+<text transform="matrix(1 0 0 1 265.3438 176.2092)" class="st2 st3">50 ns</text>
+<text transform="matrix(1 0 0 1 265.3438 206.6615)" class="st2 st3">60 ns</text>
+<text transform="matrix(1 0 0 1 265.3438 237.1139)" class="st2 st3">70 ns</text>
+<text transform="matrix(1 0 0 1 265.3438 267.566)" class="st2 st3">80 ns</text>
+<g>
+	<path d="M248.5,43.5v14.9H26.8V43.5H248.5 M249.5,42.5H25.8v16.9h223.7V42.5L249.5,42.5z"/>
+</g>
+<text transform="matrix(1 0 0 1 148.5853 55.0963)" class="st2 st3">0</text>
+<g>
+	<line class="st1" x1="221.6" y1="42.5" x2="221.6" y2="59.3"/>
+</g>
+<g>
+	<line class="st1" x1="193.6" y1="42.5" x2="193.6" y2="59.3"/>
+</g>
+<g>
+	<line class="st1" x1="165.6" y1="42.5" x2="165.6" y2="59.3"/>
+</g>
+<g>
+	<line class="st1" x1="137.7" y1="42.5" x2="137.7" y2="59.3"/>
+</g>
+<g>
+	<line class="st1" x1="109.7" y1="42.5" x2="109.7" y2="59.3"/>
+</g>
+<g>
+	<line class="st1" x1="81.7" y1="42.5" x2="81.7" y2="59.3"/>
+</g>
+<g>
+	<line class="st1" x1="53.8" y1="42.5" x2="53.8" y2="59.3"/>
+</g>
+<text transform="matrix(1 0 0 1 36.7173 55.0959)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 204.5189 55.0965)" class="st2 st3">1</text>
+<text transform="matrix(1 0 0 1 232.4861 55.0962)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 176.5521 55.0959)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 120.6181 55.0959)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 92.6512 55.0959)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 64.6842 55.0959)" class="st2 st3">0</text>
+<g>
+	<path d="M248.5,73.9v14.9H26.8V73.9H248.5 M249.5,72.9H25.8v16.9h223.7V72.9L249.5,72.9z"/>
+</g>
+<text transform="matrix(1 0 0 1 148.5853 85.5486)" class="st2 st3">0</text>
+<g>
+	<line class="st1" x1="221.6" y1="72.9" x2="221.6" y2="89.8"/>
+</g>
+<g>
+	<line class="st1" x1="193.6" y1="72.9" x2="193.6" y2="89.8"/>
+</g>
+<g>
+	<line class="st1" x1="165.6" y1="72.9" x2="165.6" y2="89.8"/>
+</g>
+<g>
+	<line class="st1" x1="137.7" y1="72.9" x2="137.7" y2="89.8"/>
+</g>
+<g>
+	<line class="st1" x1="109.7" y1="72.9" x2="109.7" y2="89.8"/>
+</g>
+<g>
+	<line class="st1" x1="81.7" y1="72.9" x2="81.7" y2="89.8"/>
+</g>
+<g>
+	<line class="st1" x1="53.8" y1="72.9" x2="53.8" y2="89.8"/>
+</g>
+<text transform="matrix(1 0 0 1 36.7173 85.5483)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 176.552 85.5486)" class="st2 st3">1</text>
+<text transform="matrix(1 0 0 1 204.519 85.5486)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 232.4861 85.5481)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 120.6181 85.5483)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 92.6512 85.5483)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 64.6842 85.5483)" class="st2 st3">0</text>
+<g>
+	<path d="M248.5,104.4v14.9H26.8v-14.9H248.5 M249.5,103.4H25.8v16.9h223.7V103.4L249.5,103.4z"/>
+</g>
+<text transform="matrix(1 0 0 1 232.4865 116.001)" class="st2 st3">0</text>
+<g>
+	<line class="st1" x1="221.6" y1="103.4" x2="221.6" y2="120.2"/>
+</g>
+<g>
+	<line class="st1" x1="193.6" y1="103.4" x2="193.6" y2="120.2"/>
+</g>
+<g>
+	<line class="st1" x1="165.6" y1="103.4" x2="165.6" y2="120.2"/>
+</g>
+<g>
+	<line class="st1" x1="137.7" y1="103.4" x2="137.7" y2="120.2"/>
+</g>
+<g>
+	<line class="st1" x1="109.7" y1="103.4" x2="109.7" y2="120.2"/>
+</g>
+<g>
+	<line class="st1" x1="81.7" y1="103.4" x2="81.7" y2="120.2"/>
+</g>
+<g>
+	<line class="st1" x1="53.8" y1="103.4" x2="53.8" y2="120.2"/>
+</g>
+<text transform="matrix(1 0 0 1 36.7173 116.0007)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 148.5852 116.0006)" class="st2 st3">1</text>
+<text transform="matrix(1 0 0 1 204.519 116.001)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 176.5521 116.0007)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 120.6181 116.0007)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 92.6512 116.0007)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 64.6842 116.0007)" class="st2 st3">0</text>
+<g>
+	<path d="M248.5,134.8v14.9H26.8v-14.9H248.5 M249.5,133.8H25.8v16.9h223.7V133.8L249.5,133.8z"/>
+</g>
+<text transform="matrix(1 0 0 1 148.5853 146.4534)" class="st2 st3">0</text>
+<g>
+	<line class="st1" x1="221.6" y1="133.8" x2="221.6" y2="150.7"/>
+</g>
+<g>
+	<line class="st1" x1="193.6" y1="133.8" x2="193.6" y2="150.7"/>
+</g>
+<g>
+	<line class="st1" x1="165.6" y1="133.8" x2="165.6" y2="150.7"/>
+</g>
+<g>
+	<line class="st1" x1="137.7" y1="133.8" x2="137.7" y2="150.7"/>
+</g>
+<g>
+	<line class="st1" x1="109.7" y1="133.8" x2="109.7" y2="150.7"/>
+</g>
+<g>
+	<line class="st1" x1="81.7" y1="133.8" x2="81.7" y2="150.7"/>
+</g>
+<g>
+	<line class="st1" x1="53.8" y1="133.8" x2="53.8" y2="150.7"/>
+</g>
+<text transform="matrix(1 0 0 1 36.7173 146.4531)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 120.618 146.4534)" class="st2 st3">1</text>
+<text transform="matrix(1 0 0 1 204.519 146.4534)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 176.5521 146.4531)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 232.4864 146.4534)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 92.6512 146.4531)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 64.6842 146.4531)" class="st2 st3">0</text>
+<g>
+	<path d="M248.5,165.3v14.9H26.8v-14.9H248.5 M249.5,164.3H25.8v16.9h223.7V164.3L249.5,164.3z"/>
+</g>
+<text transform="matrix(1 0 0 1 148.5853 176.9058)" class="st2 st3">0</text>
+<g>
+	<line class="st1" x1="221.6" y1="164.3" x2="221.6" y2="181.1"/>
+</g>
+<g>
+	<line class="st1" x1="193.6" y1="164.3" x2="193.6" y2="181.1"/>
+</g>
+<g>
+	<line class="st1" x1="165.6" y1="164.3" x2="165.6" y2="181.1"/>
+</g>
+<g>
+	<line class="st1" x1="137.7" y1="164.3" x2="137.7" y2="181.1"/>
+</g>
+<g>
+	<line class="st1" x1="109.7" y1="164.3" x2="109.7" y2="181.1"/>
+</g>
+<g>
+	<line class="st1" x1="81.7" y1="164.3" x2="81.7" y2="181.1"/>
+</g>
+<g>
+	<line class="st1" x1="53.8" y1="164.3" x2="53.8" y2="181.1"/>
+</g>
+<text transform="matrix(1 0 0 1 36.7173 176.9054)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 92.6514 176.9054)" class="st2 st3">1</text>
+<text transform="matrix(1 0 0 1 204.519 176.9058)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 176.5521 176.9054)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 120.6181 176.9054)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 232.4863 176.9057)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 64.6842 176.9054)" class="st2 st3">0</text>
+<g>
+	<path d="M248.5,195.7v14.9H26.8v-14.9H248.5 M249.5,194.7H25.8v16.9h223.7V194.7L249.5,194.7z"/>
+</g>
+<text transform="matrix(1 0 0 1 148.5853 207.3582)" class="st2 st3">0</text>
+<g>
+	<line class="st1" x1="221.6" y1="194.7" x2="221.6" y2="211.6"/>
+</g>
+<g>
+	<line class="st1" x1="193.6" y1="194.7" x2="193.6" y2="211.6"/>
+</g>
+<g>
+	<line class="st1" x1="165.6" y1="194.7" x2="165.6" y2="211.6"/>
+</g>
+<g>
+	<line class="st1" x1="137.7" y1="194.7" x2="137.7" y2="211.6"/>
+</g>
+<g>
+	<line class="st1" x1="109.7" y1="194.7" x2="109.7" y2="211.6"/>
+</g>
+<g>
+	<line class="st1" x1="81.7" y1="194.7" x2="81.7" y2="211.6"/>
+</g>
+<g>
+	<line class="st1" x1="53.8" y1="194.7" x2="53.8" y2="211.6"/>
+</g>
+<text transform="matrix(1 0 0 1 36.7173 207.3578)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 64.6841 207.3585)" class="st2 st3">1</text>
+<text transform="matrix(1 0 0 1 204.519 207.3582)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 176.5521 207.3578)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 120.6181 207.3578)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 92.6512 207.3578)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 232.4862 208.056)" class="st2 st3">0</text>
+<g>
+	<path d="M248.5,226.2V241H26.8v-14.9H248.5 M249.5,225.2H25.8V242h223.7V225.2L249.5,225.2z"/>
+</g>
+<text transform="matrix(1 0 0 1 148.5853 237.8106)" class="st2 st3">0</text>
+<g>
+	<line class="st1" x1="221.6" y1="225.2" x2="221.6" y2="242"/>
+</g>
+<g>
+	<line class="st1" x1="193.6" y1="225.2" x2="193.6" y2="242"/>
+</g>
+<g>
+	<line class="st1" x1="165.6" y1="225.2" x2="165.6" y2="242"/>
+</g>
+<g>
+	<line class="st1" x1="137.7" y1="225.2" x2="137.7" y2="242"/>
+</g>
+<g>
+	<line class="st1" x1="109.7" y1="225.2" x2="109.7" y2="242"/>
+</g>
+<g>
+	<line class="st1" x1="81.7" y1="225.2" x2="81.7" y2="242"/>
+</g>
+<g>
+	<line class="st1" x1="53.8" y1="225.2" x2="53.8" y2="242"/>
+</g>
+<text transform="matrix(1 0 0 1 232.4865 237.8097)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 36.7172 237.8102)" class="st2 st3">1</text>
+<text transform="matrix(1 0 0 1 204.519 237.8106)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 176.5521 237.8102)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 120.6181 237.8102)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 92.6512 237.8102)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 64.6842 237.8102)" class="st2 st3">0</text>
+<path class="st1" d="M207.7,28.9"/>
+<g>
+	<g>
+		<path class="st1" d="M206.1,58.7c-4.6,5.8-13.9,6.9-13.9,6.9c0,0-3.4,0.5-6.4,1.9"/>
+		<g>
+			<polygon points="181.2,72.9 185,62.9 186.4,67.4 190.9,68.4 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="st1" d="M178.1,89.1c-4.6,5.8-13.9,6.9-13.9,6.9c0,0-3.4,0.5-6.4,1.9"/>
+		<g>
+			<polygon points="153.2,103.4 157.1,93.3 158.4,97.8 163,98.9 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="st1" d="M150.1,119.6c-4.6,5.8-13.9,6.9-13.9,6.9c0,0-3.4,0.5-6.4,1.9"/>
+		<g>
+			<polygon points="125.2,133.8 129.1,123.8 130.4,128.3 135,129.4 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="st1" d="M122.2,150.1c-4.6,5.8-13.9,6.9-13.9,6.9c0,0-3.4,0.5-6.4,1.9"/>
+		<g>
+			<polygon points="97.3,164.3 101.1,154.2 102.5,158.7 107,159.8 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="st1" d="M94.2,180.5c-4.6,5.8-13.9,6.9-13.9,6.9c0,0-3.4,0.5-6.4,1.9"/>
+		<g>
+			<polygon points="69.3,194.7 73.2,184.7 74.5,189.2 79.1,190.3 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<path class="st1" d="M66.2,211c-4.6,5.8-13.9,6.9-13.9,6.9c0,0-3.4,0.5-6.4,1.9"/>
+		<g>
+			<polygon points="41.3,225.2 45.2,215.1 46.5,219.6 51.1,220.7 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<path d="M248.5,256.6v14.9H26.8v-14.9H248.5 M249.5,255.6H25.8v16.9h223.7V255.6L249.5,255.6z"/>
+</g>
+<text transform="matrix(1 0 0 1 148.5853 268.2629)" class="st2 st3">0</text>
+<g>
+	<line class="st1" x1="221.6" y1="255.6" x2="221.6" y2="272.5"/>
+</g>
+<g>
+	<line class="st1" x1="193.6" y1="255.6" x2="193.6" y2="272.5"/>
+</g>
+<g>
+	<line class="st1" x1="165.6" y1="255.6" x2="165.6" y2="272.5"/>
+</g>
+<g>
+	<line class="st1" x1="137.7" y1="255.6" x2="137.7" y2="272.5"/>
+</g>
+<g>
+	<line class="st1" x1="109.7" y1="255.6" x2="109.7" y2="272.5"/>
+</g>
+<g>
+	<line class="st1" x1="81.7" y1="255.6" x2="81.7" y2="272.5"/>
+</g>
+<g>
+	<line class="st1" x1="53.8" y1="255.6" x2="53.8" y2="272.5"/>
+</g>
+<text transform="matrix(1 0 0 1 36.7173 268.2626)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 232.4862 268.2636)" class="st2 st3">1</text>
+<text transform="matrix(1 0 0 1 204.519 268.2629)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 176.5521 268.2626)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 120.6181 268.2626)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 92.6512 268.2626)" class="st2 st3">0</text>
+<text transform="matrix(1 0 0 1 64.6842 268.2626)" class="st2 st3">0</text>
+<g>
+	<g>
+		<path class="st1" d="M26.4,235c-9,1.4-9.1,37.8-4.7,43.8c1.4,1.8,2.7,2.7,4.1,3.2c2.4,0.9,5.3,1.2,8.3,1.3
+			c24.7,0.5,180.2-0.5,185.6-0.2c1.2,0.1,5.5,0.4,9.4-2.1c0.7-0.4,1.3-1.2,1.9-2.1"/>
+		<g>
+			<polygon points="233.8,272.5 233.1,283.2 230.5,279.3 225.8,279.7 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<path d="M248.5,13v14.9H26.8V13H248.5 M249.5,12H25.8v16.9h223.7V12L249.5,12z"/>
+</g>
+</svg>

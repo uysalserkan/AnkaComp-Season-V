@@ -330,7 +330,7 @@ signal <name> : std_logic_vector(<msb> downto <lsb>) := <initial_value>;
 
 ![T11-logic]
 
-[T10-output-1]: /T10_Out1.png
-[T10-output-2]: /T10_Out2.png
-[T11-output-1]: /T11_Out1.png
-[T11-logic]: /T11_Logic.svg
+[T10-output-1]: T10_Out1.png
+[T10-output-2]: T10_Out2.png
+[T11-output-1]: T11_Out1.png
+[T11-logic]: T11_Logic.svg

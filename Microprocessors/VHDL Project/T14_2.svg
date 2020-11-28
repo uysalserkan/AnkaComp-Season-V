@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 438.3 244.7" style="enable-background:new 0 0 438.3 244.7;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FF0000;stroke-miterlimit:10;}
+	.st1{fill:#FF0000;}
+	.st2{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st3{font-family:'DroidSans';}
+	.st4{font-size:12px;}
+	.st5{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st6{font-size:7.4002px;}
+</style>
+<g>
+	<g>
+		<g>
+			<line class="st0" x1="72.5" y1="69" x2="81" y2="69"/>
+			<g>
+				<polygon class="st1" points="80.5,70.8 83.7,69 80.5,67.1 				"/>
+			</g>
+		</g>
+	</g>
+	<line class="st2" x1="29" y1="102.1" x2="40.2" y2="102.1"/>
+	<line class="st0" x1="29" y1="35.8" x2="40.2" y2="35.8"/>
+	<line class="st2" x1="29" y1="80" x2="40.2" y2="80"/>
+	<line class="st2" x1="29" y1="57.9" x2="40.2" y2="57.9"/>
+	<text transform="matrix(1 0 0 1 11.1654 39.3708)" class="st3 st4">AA</text>
+	<text transform="matrix(1 0 0 1 11.1654 61.4542)" class="st3 st4">BB</text>
+	<text transform="matrix(1 0 0 1 11.1654 83.5375)" class="st3 st4">CC</text>
+	<text transform="matrix(1 0 0 1 11.1654 105.6208)" class="st3 st4">DD</text>
+	<text transform="matrix(1 0 0 1 46.1159 20.4949)" class="st3 st4">“00”</text>
+	<line class="st2" x1="56.4" y1="35" x2="56.4" y2="23.8"/>
+	<text transform="matrix(1 0 0 1 86.4987 72.4958)" class="st3 st4">AA</text>
+	<polygon class="st5" points="72.5,91.8 40.2,114.1 40.2,23.8 72.5,46.1 	"/>
+	<text transform="matrix(1 0 0 1 51.8083 45.8118)" class="st3 st6">Sel</text>
+	<text transform="matrix(1 0 0 1 47.8083 71.1458)" class="st3 st6">Output</text>
+</g>
+<g>
+	<g>
+		<g>
+			<line class="st0" x1="181.6" y1="69" x2="190.1" y2="69"/>
+			<g>
+				<polygon class="st1" points="189.6,70.8 192.8,69 189.6,67.1 				"/>
+			</g>
+		</g>
+	</g>
+	<line class="st2" x1="138.1" y1="102.1" x2="149.3" y2="102.1"/>
+	<line class="st2" x1="138.1" y1="35.8" x2="149.3" y2="35.8"/>
+	<line class="st2" x1="138.1" y1="80" x2="149.3" y2="80"/>
+	<line class="st0" x1="138.1" y1="57.9" x2="149.3" y2="57.9"/>
+	<text transform="matrix(1 0 0 1 120.2626 39.3708)" class="st3 st4">AA</text>
+	<text transform="matrix(1 0 0 1 120.2626 61.4542)" class="st3 st4">BB</text>
+	<text transform="matrix(1 0 0 1 120.2626 83.5375)" class="st3 st4">CC</text>
+	<text transform="matrix(1 0 0 1 120.2626 105.6208)" class="st3 st4">DD</text>
+	<text transform="matrix(1 0 0 1 155.2131 20.4949)" class="st3 st4">“01”</text>
+	<line class="st2" x1="165.5" y1="35" x2="165.5" y2="23.8"/>
+	<text transform="matrix(1 0 0 1 195.5959 72.4958)" class="st3 st4">BB</text>
+	<polygon class="st5" points="181.6,91.8 149.3,114.1 149.3,23.8 181.6,46.1 	"/>
+	<text transform="matrix(1 0 0 1 160.9055 45.8118)" class="st3 st6">Sel</text>
+	<text transform="matrix(1 0 0 1 156.9055 71.1458)" class="st3 st6">Output</text>
+</g>
+<g>
+	<g>
+		<g>
+			<line class="st0" x1="399.8" y1="69" x2="408.3" y2="69"/>
+			<g>
+				<polygon class="st1" points="407.8,70.8 411,69 407.8,67.1 				"/>
+			</g>
+		</g>
+	</g>
+	<line class="st0" x1="356.3" y1="102.1" x2="367.5" y2="102.1"/>
+	<line class="st2" x1="356.3" y1="35.8" x2="367.5" y2="35.8"/>
+	<line class="st2" x1="356.3" y1="80" x2="367.5" y2="80"/>
+	<line class="st2" x1="356.3" y1="57.9" x2="367.5" y2="57.9"/>
+	<text transform="matrix(1 0 0 1 338.4568 39.3708)" class="st3 st4">AA</text>
+	<text transform="matrix(1 0 0 1 338.4568 61.4541)" class="st3 st4">BB</text>
+	<text transform="matrix(1 0 0 1 338.4568 83.5374)" class="st3 st4">CC</text>
+	<text transform="matrix(1 0 0 1 338.4568 105.6208)" class="st3 st4">DD</text>
+	<text transform="matrix(1 0 0 1 373.4073 20.4948)" class="st3 st4">“11”</text>
+	<line class="st2" x1="383.7" y1="35" x2="383.7" y2="23.8"/>
+	<text transform="matrix(1 0 0 1 413.7901 72.4958)" class="st3 st4">DD</text>
+	<polygon class="st5" points="399.8,91.8 367.5,114.1 367.5,23.8 399.8,46.1 	"/>
+	<text transform="matrix(1 0 0 1 379.0997 45.8117)" class="st3 st6">Sel</text>
+	<text transform="matrix(1 0 0 1 375.0997 71.1457)" class="st3 st6">Output</text>
+</g>
+<g>
+	<g>
+		<g>
+			<line class="st0" x1="290.7" y1="69" x2="299.2" y2="69"/>
+			<g>
+				<polygon class="st1" points="298.7,70.8 301.9,69 298.7,67.1 				"/>
+			</g>
+		</g>
+	</g>
+	<line class="st2" x1="247.2" y1="102.1" x2="258.4" y2="102.1"/>
+	<line class="st2" x1="247.2" y1="35.8" x2="258.4" y2="35.8"/>
+	<line class="st0" x1="247.2" y1="80" x2="258.4" y2="80"/>
+	<line class="st2" x1="247.2" y1="57.9" x2="258.4" y2="57.9"/>
+	<text transform="matrix(1 0 0 1 229.3595 39.3708)" class="st3 st4">AA</text>
+	<text transform="matrix(1 0 0 1 229.3595 61.4542)" class="st3 st4">BB</text>
+	<text transform="matrix(1 0 0 1 229.3595 83.5375)" class="st3 st4">CC</text>
+	<text transform="matrix(1 0 0 1 229.3595 105.6208)" class="st3 st4">DD</text>
+	<text transform="matrix(1 0 0 1 264.3101 20.4949)" class="st3 st4">“10”</text>
+	<line class="st2" x1="274.6" y1="35" x2="274.6" y2="23.8"/>
+	<text transform="matrix(1 0 0 1 304.6929 72.4958)" class="st3 st4">CC</text>
+	<polygon class="st5" points="290.7,91.8 258.4,114.1 258.4,23.8 290.7,46.1 	"/>
+	<text transform="matrix(1 0 0 1 270.0024 45.8118)" class="st3 st6">Sel</text>
+	<text transform="matrix(1 0 0 1 266.0024 71.1458)" class="st3 st6">Output</text>
+</g>
+<g>
+	<g>
+		<g>
+			<line class="st0" x1="236.1" y1="192.3" x2="244.7" y2="192.3"/>
+			<g>
+				<polygon class="st1" points="244.1,194.1 247.3,192.3 244.1,190.4 				"/>
+			</g>
+		</g>
+	</g>
+	<line class="st2" x1="192.6" y1="225.4" x2="203.8" y2="225.4"/>
+	<line class="st2" x1="192.6" y1="159.1" x2="203.8" y2="159.1"/>
+	<line class="st2" x1="192.6" y1="203.3" x2="203.8" y2="203.3"/>
+	<line class="st2" x1="192.6" y1="181.2" x2="203.8" y2="181.2"/>
+	<text transform="matrix(1 0 0 1 174.811 162.6571)" class="st3 st4">AA</text>
+	<text transform="matrix(1 0 0 1 174.811 184.7404)" class="st3 st4">BB</text>
+	<text transform="matrix(1 0 0 1 174.811 206.8237)" class="st3 st4">CC</text>
+	<text transform="matrix(1 0 0 1 174.811 228.9071)" class="st3 st4">DD</text>
+	<text transform="matrix(1 0 0 1 208.1664 142.7811)" class="st3 st4">Non 0/1 value</text>
+	<line class="st2" x1="220" y1="158.3" x2="220" y2="147.1"/>
+	<text transform="matrix(1 0 0 1 250.1444 195.7821)" class="st3 st4">XX</text>
+	<polygon class="st5" points="236.1,215.1 203.8,237.4 203.8,147.1 236.1,169.4 	"/>
+	<text transform="matrix(1 0 0 1 215.4539 169.098)" class="st3 st6">Sel</text>
+	<text transform="matrix(1 0 0 1 211.4539 194.432)" class="st3 st6">Output</text>
+</g>
+</svg>

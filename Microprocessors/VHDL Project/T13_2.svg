@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 337.7 66.3" style="enable-background:new 0 0 337.7 66.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{font-family:'DroidSans';}
+	.st1{font-size:12px;}
+	.st2{fill:none;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<text transform="matrix(1 0 0 1 141.615 54.4482)" class="st0 st1">0</text>
+<text transform="matrix(1 0 0 1 208.528 54.4482)" class="st0 st1">1</text>
+<text transform="matrix(1 0 0 1 225.2566 54.4482)" class="st0 st1">0</text>
+<text transform="matrix(1 0 0 1 241.9843 54.4482)" class="st0 st1">0</text>
+<text transform="matrix(1 0 0 1 191.7999 54.4482)" class="st0 st1">0</text>
+<text transform="matrix(1 0 0 1 158.3434 54.4482)" class="st0 st1">0</text>
+<text transform="matrix(1 0 0 1 124.8868 54.4482)" class="st0 st1">0</text>
+<text transform="matrix(1 0 0 1 175.0714 54.4482)" class="st0 st1">0</text>
+<text transform="matrix(1 0 0 1 241.9846 19.6982)" class="st0 st1">1</text>
+<text transform="matrix(1 0 0 1 225.2561 19.6982)" class="st0 st1">0</text>
+<text transform="matrix(1 0 0 1 208.5282 19.6982)" class="st0 st1">0</text>
+<text transform="matrix(1 0 0 1 191.7998 19.6982)" class="st0 st1">0</text>
+<text transform="matrix(1 0 0 1 158.3436 19.6982)" class="st0 st1">0</text>
+<text transform="matrix(1 0 0 1 175.0717 19.6982)" class="st0 st1">0</text>
+<g>
+	<g>
+		<line class="st2" x1="242" y1="20.3" x2="219.4" y2="40.4"/>
+		<g>
+			<polygon points="214.1,45.1 218.8,35.5 219.8,40.1 224.2,41.5 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st2" x1="158.3" y1="19.7" x2="135.7" y2="39.8"/>
+		<g>
+			<polygon points="130.5,44.5 135.2,34.9 136.1,39.5 140.6,40.9 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st2" x1="191.8" y1="20.3" x2="169.2" y2="40.4"/>
+		<g>
+			<polygon points="163.9,45.1 168.7,35.5 169.6,40.1 174.1,41.5 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st2" x1="175.1" y1="20.3" x2="152.5" y2="40.4"/>
+		<g>
+			<polygon points="147.2,45.1 151.9,35.5 152.9,40.1 157.3,41.5 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st2" x1="208.5" y1="20.3" x2="185.9" y2="40.4"/>
+		<g>
+			<polygon points="180.7,45.1 185.4,35.5 186.3,40.1 190.8,41.5 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st2" x1="225.3" y1="20.3" x2="202.7" y2="40.4"/>
+		<g>
+			<polygon points="197.4,45.1 202.1,35.5 203,40.1 207.5,41.5 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 259.6509 19.6981)" class="st0 st1">=</text>
+<text transform="matrix(1 0 0 1 277.3177 19.6986)" class="st0 st1">decimal 1</text>
+<text transform="matrix(1 0 0 1 259.6509 54.4483)" class="st0 st1">=</text>
+<text transform="matrix(1 0 0 1 277.3177 54.4483)" class="st0 st1">decimal 4</text>
+<text transform="matrix(1 0 0 1 3.75 32.6265)" class="st0 st1">Bit shift by 2 to the left</text>
+</svg>

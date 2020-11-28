@@ -21,9 +21,9 @@
 
 ### Chapter 3: **Building Digital Desing**
 
-* [ ] Video 12
-* [ ] Video 13
-* [ ] Video 14
+* [x] Video 12
+* [x] Video 13
+* [x] Video 14
 * [ ] Video 15
 * [ ] Video 16
 * [ ] Video 17

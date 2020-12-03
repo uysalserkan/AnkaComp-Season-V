@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 159 113.3" style="enable-background:new 0 0 159 113.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st1{font-family:'DroidSans';}
+	.st2{font-size:12px;}
+	.st3{fill:none;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<rect x="54" y="14.7" class="st0" width="49" height="72.7"/>
+<text transform="matrix(1 0 0 1 17.0002 32.5532)" class="st1 st2">Input</text>
+<text transform="matrix(1 0 0 1 110.6665 32.5532)" class="st1 st2">Output</text>
+<text transform="matrix(1 0 0 1 68.3333 107.333)" class="st1 st2">nRst</text>
+<text transform="matrix(1 0 0 1 30.0023 71.866)" class="st1 st2">Clk</text>
+<polyline class="st3" points="54,74 63,68.3 63,68.3 54,62.7 "/>
+<line class="st3" x1="54" y1="29" x2="48.5" y2="29"/>
+<line class="st3" x1="54" y1="68.3" x2="48.5" y2="68.3"/>
+<line class="st3" x1="108.5" y1="29" x2="103" y2="29"/>
+<line class="st3" x1="78.5" y1="91" x2="78.5" y2="96.5"/>
+<circle class="st3" cx="78.5" cy="89.3" r="1.7"/>
+<text transform="matrix(1 0 0 1 72.6054 52.522)" class="st1 st2">FF</text>
+</svg>

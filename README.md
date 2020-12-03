@@ -24,9 +24,9 @@
 * [x] Video 12
 * [x] Video 13
 * [x] Video 14
-* [ ] Video 15
-* [ ] Video 16
-* [ ] Video 17
+* [x] Video 15
+* [x] Video 16
+* [x] Video 17
 
 ### Chapter 4: **Sim. versus Real-Time**
 

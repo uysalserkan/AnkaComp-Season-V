@@ -278,5 +278,10 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# VHDL Projects
 /Microprocessors/VHDL Project/work
 /Microprocessors/VHDL Project/VHDL-Project*
+
+# C project outs
+a.out

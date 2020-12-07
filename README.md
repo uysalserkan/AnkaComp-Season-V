@@ -30,9 +30,9 @@
 
 ### Chapter 4: **Sim. versus Real-Time**
 
-* [ ] Video 18
-* [ ] Video 19
-* [ ] Video 20
-* [ ] Video 21
+* [x] Video 18
+* [x] Video 19
+* [x] Video 20
+* [x] Video 21
 * [ ] Video 22
 * [ ] Video 23

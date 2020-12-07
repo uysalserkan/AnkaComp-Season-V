@@ -105,3 +105,40 @@ Finite-state machine, tüm durumları kontrol edebilmeli.
 run 5 min ile bu çıktıyı elde edebiliriz.
 
 ## Chapter 20: HOW TO USE A FUNCTION IN VHDL
+
+Fonksiyonları belirli bir algoritma içeren alt-programlar olarak varsayabiliriz. Bir fonksiyon 0 veya daha fazla parametre alabilir ve geriye **kesinlikle bir değer döndürür**. Ek olarak fonksiyonlar *wait* komutları içermezler, bu nedenden dolayı 0 işlem zamanında çalışırlar.
+
+VHDL dilinde 2 çeşit fonksiyon vardır, bunlar *pure* ve *impure* adlarına sahiptir.
+
+**Pure** fonksiyonlar gelen parametreleri *değiştirmez* ve dışarıdan *başka bir signal okumazlar*. Şundan emin olabiliriz ki eğer bir *pure fonksiyon* çağırıyorsak, gönderdiğimiz ve göndermediğimiz değişkenlerde her hangi bir değişim gerçekleşmeyecektir.
+
+### Pure-impure fonksiyon tanımlama Syntax
+
+```VHDL
+[pure|impure] function <function_name> (<parameter1_name> : <parameter1_type> := <default_value>;
+                                        <parameter2_name> : <parameter2_type> := <default_value>;
+                                        ... ) return <return_type> is
+    <constant_or_variable_declaration>
+begin
+    <code_performed_by_the_function>
+    return <value>
+end function;
+```
+
+Bir fonksiyon tanımlarken *pure veya impure* keywordlerini kullanmazsak, program default olarak **pure** atayacaktır fonksiyonun başına (*pure ve impure* keywordleri opsiyoneldir). Ek olarak tanımlamalarda bulunan *default_value*'de opsiyoneldir, atama yapmazsak her hangi bir sıkıntı olmayacaktır.
+
+Fonksiyonlar son bölümünde `return` komutunu içermek zorundadır.
+
+Tıpkı diğer tanımlamalar gibi, fonksiyonların da kendilerine özel `is` ve `begin` bölümleri vardır ve bu bölümlerden sonra işlemlerimizi gerçekleştiririz. Ek olarak fonksiyon içerisinde oluşturduğumuz ara değişkenler fonksiyon sonlanınca yok olurlar, dışarıdan bir etki ile bu değişkenlere erişilemez.
+
+### Örnek Kod Çıktısı 3 (run 5 min)
+
+![run-5-min](T21_1.png)
+
+### Örnek Kod Çıktısı 4 
+
+![StartNorth-state](T21_2.png)
+
+Burada `if Counter = ClockFrequencyHz * 5 -1 then` komutunu daha kompakt bir hale getirmek için fonksiyon tanımladık ve şöyle bir hal aldı.
+
+`if Counter = CounterVal(Seconds => 5) then`

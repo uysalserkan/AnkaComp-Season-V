@@ -29,3 +29,32 @@ Eğer istersek salise, saniye, dakika, saat veya gün clock-counter'i yapabiliri
 ![counter-bits](T18_4.svg)
 
 ## Chapter 19: HOW TO USE A PROCEDURE IN VHDL
+
+**Procedure** olarak tanıtılan yapı aslında geri bir değer döndürmeyen fonksiyonlardır fakat içerdikleri *inout* veya *out* parametrelerin değerlerini değiştirebilir
+
+### Procedure Syntax
+
+```VHDL
+procedure <procedure_name> (signal|variable|constant <name1> : in|out|inout <type>;
+                            signal|variable|constant <name2> : in|out|inout <type>;
+                            ... ) is
+    <declarations_for_use_within_the_procedure>
+begin
+    <code_performed_by_the_procedure_here>
+end procedure;
+```
+
+Procedure başlangıçlarını tıpkı önceden yaptığımız gibi *is* ve *begin* kullanarak işlemlerimizi gerçekleştireceğimiz yere ulaşırız.
+Parametre olarak *constants, variables, types, subtypes, ve aliases* içerebilirler fakat **signal** değerleri **içeremezler**.
+
+Fonksiyonlardan farklı olarak, procedure'ler *wait* komutu içermek **zorunda değillerdir** fakat istenildiği zaman wait komutunu kullanabilir.
+
+### Örnek Kod Çıktısı
+
+![Procedure-Çıktısı](T19_1.png)
+
+Aslında çıktımız bir öncekiler ile aynı fakat bu aşamada kodumuzu daha modüler yapıp daha az satır kod ile aynı işlemleri yapıyoruz.
+
+## Chapter 20: HOW TO CREATE A FINITE-STATE MACHINE IN VHDL
+
+x

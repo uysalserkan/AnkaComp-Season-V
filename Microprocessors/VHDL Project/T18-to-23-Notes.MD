@@ -49,7 +49,7 @@ Parametre olarak *constants, variables, types, subtypes, ve aliases* içerebilir
 
 Fonksiyonlardan farklı olarak, procedure'ler *wait* komutu içermek **zorunda değillerdir** fakat istenildiği zaman wait komutunu kullanabilir.
 
-### Örnek Kod Çıktısı
+### Örnek Kod Çıktısı 1
 
 ![Procedure-Çıktısı](T19_1.png)
 
@@ -57,4 +57,51 @@ Aslında çıktımız bir öncekiler ile aynı fakat bu aşamada kodumuzu daha m
 
 ## Chapter 20: HOW TO CREATE A FINITE-STATE MACHINE IN VHDL
 
-x
+Finite-State Machine (FSM), çıktı parametresi bir önceki duruma bağlı olur. Yani her çıktı bir önceki çıktıya bağımlıdır, bir önceki çıktı, o anki çıktıya direkt olarak etki eder *finite-state machine*'de.
+
+Eğer zamana bağlı bir algoritma yazacaksak *VHDL* üzerinden, bunu yapmanın en iyi yolu *finite-state machine* ile yapmaktır.
+
+Yapacağımız **finite-state machine** mekanizması bir trafik lambaları uygulaması olacak.
+
+![traffic-lights](T20_1.gif)
+
+Bu stateleri daha iyi kullanmak için VHDL içerisinde **enumerated type** oluşturuyoruz. Böylece sadece sşgned veya unsigned değerler içermek yerine daha farklı değerleri bir arada tutabiliriz.
+
+### VHDL'de örnek bir Enumerated Type Syntaxı
+
+```VHDL
+type <type_name> is (<state_name1>, <state_name2>, ...);
+signal <signal_name> : <type_name>;
+```
+
+### Basit, bir durumlu Finite-State Machine Kodu
+
+```VHDL
+process(Clk) is
+begin
+    if rising_edge(Clk) then
+        if nRst = '0' then
+            State <= <reset_state>;
+        else
+            case State is
+                when <state_name> =>
+                    <set_outputs_for_this_state_here>
+                    if <state_change_condition_is_true> then
+                        State <= <next_state_name>;
+                    end if;
+                ...
+            end case;
+        end if;
+    end if;
+end process;
+```
+
+Finite-state machine, tüm durumları kontrol edebilmeli.
+
+### Örnek Kod Çıktısı 2
+
+![Trafic-Lights](T20_2.png)
+
+run 5 min ile bu çıktıyı elde edebiliriz.
+
+## Chapter 20: HOW TO USE A FUNCTION IN VHDL

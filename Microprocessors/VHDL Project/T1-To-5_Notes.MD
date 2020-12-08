@@ -1,8 +1,8 @@
-# Tutorial 1-5 arasında bulunan önemli olabilecek notlar.
+# Chapter 1-5 arasında bulunan önemli olabilecek notlar.
 
 </br>
 
-## Tutorial 2
+## Chapter 2: HOW TO DELAY TIME IN VHDL: WAIT FOR
 
 `wait;` fonksiyonu direkt programı durdururken `wait for` ile belirli döngüye alabiliriz.
 
@@ -27,7 +27,7 @@ Eğer hiç `wait` fonksiyonunu kullanmazsak program **begin** ve **end process**
 
 </br>
 
-## Tutorial 3
+## Chapter 3: HOW TO USE LOOP AND EXIT IN VHDL
 
 Programımızı `Loop` ve `End Loop;` satırları arasında tekrarlara sokabiliriz. **wait for \<saniye> <türü>;** şeklinde bitirecek olursak, bu saniye kadar loop içerisinde kalır ve daha sonra programı loop içerisinde iken bitirir, sonraki satırlara ve komutlara uğramaz. Sonraki satırlara uğramasını istersek Loop içerisinden **exit;** komutu ile çıkabiliriz.
 
@@ -41,7 +41,7 @@ Programımızı `Loop` ve `End Loop;` satırları arasında tekrarlara sokabilir
 
 </br>
 
-## Tutorial 4
+## Chapter 4: HOW TO USE A FOR-LOOP IN VHDL
 
 Döngümüzü belirli defa çalıştırmak istediğimizde **for loop**'unu kullanıırız.
 
@@ -62,7 +62,7 @@ Burada bulunan `<c>` değişkenin adını temsil eder, `<r>` ise bizim aralığ�
 * *`0 to 0`*: Sadece 0'ı içeren aralık.
 * *`0 to -1`*: Boş aralık vermek istediğimizde kullanırız.
 
-## Tutorial 5
+## Chapter 5: HOW TO USE A WHILE-LOOP IN VHDL
 
 ### **while loop Syntax**
 

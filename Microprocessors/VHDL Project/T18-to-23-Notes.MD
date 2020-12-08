@@ -104,7 +104,7 @@ Finite-state machine, tüm durumları kontrol edebilmeli.
 
 run 5 min ile bu çıktıyı elde edebiliriz.
 
-## Chapter 20: HOW TO USE A FUNCTION IN VHDL
+## Chapter 21: HOW TO USE A FUNCTION IN VHDL
 
 Fonksiyonları belirli bir algoritma içeren alt-programlar olarak varsayabiliriz. Bir fonksiyon 0 veya daha fazla parametre alabilir ve geriye **kesinlikle bir değer döndürür**. Ek olarak fonksiyonlar *wait* komutları içermezler, bu nedenden dolayı 0 işlem zamanında çalışırlar.
 
@@ -135,10 +135,34 @@ Tıpkı diğer tanımlamalar gibi, fonksiyonların da kendilerine özel `is` ve 
 
 ![run-5-min](T21_1.png)
 
-### Örnek Kod Çıktısı 4 
+### Örnek Kod Çıktısı 4
 
 ![StartNorth-state](T21_2.png)
 
 Burada `if Counter = ClockFrequencyHz * 5 -1 then` komutunu daha kompakt bir hale getirmek için fonksiyon tanımladık ve şöyle bir hal aldı.
 
 `if Counter = CounterVal(Seconds => 5) then`
+
+## Chapter 22: HOW TO USE AN IMPURE FUNCTION IN VHDL
+
+*Impure fonksiyonlar* kendi parametre listesinde olan veya olmayan her hangi bir signal'i okuyup değiştirebilir. Impure fonksiyonların bu etkisine **side effect** denir.
+
+Yani bu demektir ki, aynı parametreleri hiç değiştirmeden tekrar gönderseniz bile **aynı sonucu alamayabilirsiniz**. Çünkü *impure fonksiyon*ların dışarıdan hangi sinyalleri nasıl okuduğunu tam olarak bilemeyiz. Bu okunan signal'lere *shadow parameters* denir.
+
+Normal fonksiyon tanımlar gibi tanımlıyoruz impure fonksiyonları, fakat *process* içerisinde tanımlamak ve kullanmak daha uygun olur. 
+
+Peki neden ihtiyacımız var *impure fonksiyonlara*? Çünkü; eğer çok sayıda signal'e sahipsek ve bunların her birini pure fonksiyonun parametre listesine yazmamız gerekcekti ve bu durumda çok uzun bir paramatre listesine sahip olacaktık.
+
+*impure fonksiyonu* tanımlarken `function` yazmak yerine `impure function` yazmamız yeterli olacaktır.
+
+Bu bölümde değiştireceğimiz kısım `CounterVal` fonksiyonun yapısı olacaktır. `Counter` değişkenini etkileyecektir.
+
+### Örnek Kod Çıktısı 5
+
+![impure-func](T22_1.png)
+
+Mantıksal olarak çıktılarımızda hiç bir şey değişmedi fakat kod yapısı olarak değişikliğe gidildi.
+
+Yeni *impute function* oluşturduk `CounterExpired` adında. Bu fonksiyon `Counter <= 0;` satırında Counter signal'ini resetlemeye yarıyor.
+
+## Chapter 23: HOW TO USE A PROCEDURE IN A PROCESS IN VHDL

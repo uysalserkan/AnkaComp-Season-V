@@ -166,3 +166,11 @@ Mantıksal olarak çıktılarımızda hiç bir şey değişmedi fakat kod yapıs
 Yeni *impute function* oluşturduk `CounterExpired` adında. Bu fonksiyon `Counter <= 0;` satırında Counter signal'ini resetlemeye yarıyor.
 
 ## Chapter 23: HOW TO USE A PROCEDURE IN A PROCESS IN VHDL
+
+Tıpki *impure function*lar gibi **procedure**'ler de içinde bulundukları **process**lerin *signal* değişkenlerini direkt olarak kullanabilirler. Fakat tek fark *geri değer döndürmemeleridir*.
+
+### Örnek Kod Çıktısı 6
+
+![son-foto](T23_1.png)
+
+Temel olarak öncek programlarımız ile aynı çıktıyı veriyor fakat, kodun davranışsal olarak daha iyi ve sağlam olduğunu söyleyebiliriz.

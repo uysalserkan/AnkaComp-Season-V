@@ -285,3 +285,7 @@ cython_debug/
 
 # C project outs
 a.out
+
+# VHDL Projects ignores
+vsim.wlf
+VHDL-Project-Env*

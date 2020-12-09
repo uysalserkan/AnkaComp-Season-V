@@ -1,6 +1,6 @@
 # Tutorial 12 - 17 arasında bulunan önemli olabilecek notlar
 
-## Chapter 12: HOW TO USE SIGNED AND UNSIGNED IN VHDL
+## [Chapter 12](T12_SignedUnsigned.vhd): HOW TO USE SIGNED AND UNSIGNED IN VHDL
 
 **std_logic_vector** gibi VHDL'de **signed** ve **unsigned** veri tipleri *bit vektörüdür.* Tek farkları *std_logic_vector*'lerin veri depolamada iyi olmalarına karşın aritmatik işlemlerde pek iyi değillerdir.
 
@@ -28,7 +28,7 @@ Signed ve Unsigned değişkenlerinin belirli bir değer aralığı vardır. Eğe
 
 ![Çıktı 2](T12_2.svg)
 
-## Chapter 13: HOW TO CREATE A CONCURRENT STATEMENT IN VHDL
+## [Chapter 13](T13_ConcurrentProcs.vhd): HOW TO CREATE A CONCURRENT STATEMENT IN VHDL
 
 Concurrent statement'ler *Signal* atamalarının **architure bölümünde** **process bölümünün dışarısında** yapılması ile oluşturulur.
 
@@ -44,7 +44,7 @@ Processler içerisindeki işlem ise shift operasyonunun ta kendisidir.
 
 ![Çıktı 2](T13_2.svg)
 
-## Chapter 14: HOW TO USE A CASE-WHEN STATEMENT IN VHDL
+## [Chapter 14](T14_CaseWhen.vhd): HOW TO USE A CASE-WHEN STATEMENT IN VHDL
 
 `Case-When` statement'leri signal, variable veya expression'lar da belirli durumlar gerçekleştiğinde gerçekleşecek olan işlemleri belirtmemize yarıyor. *(İf-Else'nin daha güzel gözüken bir versiyonu.)*
 
@@ -86,7 +86,7 @@ end case;
 
 ![Çıktı 2](T14_2.svg)
 
-## Chapter 15: HOW TO USE PORT MAP INSTANTIATION IN VHDL
+## Chapter 15 [ [1](T15_Mux.vhd) [2](T15_PortMap.vhd) ]: HOW TO USE PORT MAP INSTANTIATION IN VHDL
 
 Aslında oluşturduğumuz *modül*ü bir *unit kod VHDL* olarak düşünebiliriz. **Mödüller** dış dünya ile **entity** üzerinden haberleşirler. Bu *entity* içerisinde `input` ve `output` parametreleri bulunmaktadır.
 
@@ -130,7 +130,7 @@ end entity
 * Eğer bir modülde input veya output sinyalleri yoksa o dosyaya **testbench** denir ve sadece simülatör kullanabilir.
 * Input veya output içeren modülleri direkt olarak simülatörde kullanamayız.
 
-## Chapter 16: HOW TO USE CONSTANTS AND GENERIC MAP IN VHDL
+## Chapter 16 [ [1](T16_GenericMap.vhd) [2](T16_GenericMux.vhd) ] : HOW TO USE CONSTANTS AND GENERIC MAP IN VHDL
 
 Bu projemizde açıkcası **sabit** olan değişkenleri **generik** (yani değişebilen) değişkenler kullanarak oluşturduğumuz modülün kullanablirliğini arttırıyoruz.
 
@@ -177,7 +177,7 @@ port map(
 
 ![çıktımız](T16_1.png)
 
-## Chapter 17: HOW TO CREATE A CLOCKED PROCESS IN VHDL
+## Chapter 17 [ [1](T17_ClockedProcess.vhd) [2](T17_FlipFlop.vhd) ]: HOW TO CREATE A CLOCKED PROCESS IN VHDL
 
 Bir çok VHDL sistemi **clocked logic** kullanır. *Synchronous logic,  sequential logic* olarak da bilinir. Basit bir clock kullanma sistemi oluşturmak istiyorsak **flip flop** modülü oluşturabiliriz.
 

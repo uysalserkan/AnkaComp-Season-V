@@ -1,6 +1,6 @@
 # Tutorial 18 - 23 arasında bulunan önemli olabilecek notlar
 
-## Chapter 18: HOW TO CREATE A TIMER IN VHDL
+## Chapter 18 [ [1](T18_TimerMod.vhd) [2](T18_Timer.vhd) ] : HOW TO CREATE A TIMER IN VHDL
 
 Şu ana kadar *time-delay* işlemini gerçekleştirmek için `wait for` fonksiyonunu kullanık. Fakat modüller içerisinde `wait for` fonksiyonunu kullanamayız, bu fonksiyon sadece *simülasyon* aşamasında kullanılır.
 
@@ -28,7 +28,7 @@ Eğer istersek salise, saniye, dakika, saat veya gün clock-counter'i yapabiliri
 
 ![counter-bits](T18_4.svg)
 
-## Chapter 19: HOW TO USE A PROCEDURE IN VHDL
+## Chapter 19 [ [1](T19_Procedure.vhd) [2](T19_TimerMod.vhd) ] : HOW TO USE A PROCEDURE IN VHDL
 
 **Procedure** olarak tanıtılan yapı aslında geri bir değer döndürmeyen fonksiyonlardır fakat içerdikleri *inout* veya *out* parametrelerin değerlerini değiştirebilir
 
@@ -55,7 +55,7 @@ Fonksiyonlardan farklı olarak, procedure'ler *wait* komutu içermek **zorunda d
 
 Aslında çıktımız bir öncekiler ile aynı fakat bu aşamada kodumuzu daha modüler yapıp daha az satır kod ile aynı işlemleri yapıyoruz.
 
-## Chapter 20: HOW TO CREATE A FINITE-STATE MACHINE IN VHDL
+## Chapter 20 [ [1](T20_FiniteStateMachine.vhd) [2](T20_TrafficLights.vhd) ] : HOW TO CREATE A FINITE-STATE MACHINE IN VHDL
 
 Finite-State Machine (FSM), çıktı parametresi bir önceki duruma bağlı olur. Yani her çıktı bir önceki çıktıya bağımlıdır, bir önceki çıktı, o anki çıktıya direkt olarak etki eder *finite-state machine*'de.
 
@@ -104,7 +104,7 @@ Finite-state machine, tüm durumları kontrol edebilmeli.
 
 run 5 min ile bu çıktıyı elde edebiliriz.
 
-## Chapter 21: HOW TO USE A FUNCTION IN VHDL
+## Chapter 21 [ [1](T21_Function.vhd) [2](T21_TrafficLights.vhd) ] : HOW TO USE A FUNCTION IN VHDL
 
 Fonksiyonları belirli bir algoritma içeren alt-programlar olarak varsayabiliriz. Bir fonksiyon 0 veya daha fazla parametre alabilir ve geriye **kesinlikle bir değer döndürür**. Ek olarak fonksiyonlar *wait* komutları içermezler, bu nedenden dolayı 0 işlem zamanında çalışırlar.
 
@@ -143,7 +143,7 @@ Burada `if Counter = ClockFrequencyHz * 5 -1 then` komutunu daha kompakt bir hal
 
 `if Counter = CounterVal(Seconds => 5) then`
 
-## Chapter 22: HOW TO USE AN IMPURE FUNCTION IN VHDL
+## Chapter 22 [ [1](T22_ImpureFunction.vhd) [2](T22_TrafficLights.vhd) ] : HOW TO USE AN IMPURE FUNCTION IN VHDL
 
 *Impure fonksiyonlar* kendi parametre listesinde olan veya olmayan her hangi bir signal'i okuyup değiştirebilir. Impure fonksiyonların bu etkisine **side effect** denir.
 
@@ -165,7 +165,7 @@ Mantıksal olarak çıktılarımızda hiç bir şey değişmedi fakat kod yapıs
 
 Yeni *impute function* oluşturduk `CounterExpired` adında. Bu fonksiyon `Counter <= 0;` satırında Counter signal'ini resetlemeye yarıyor.
 
-## Chapter 23: HOW TO USE A PROCEDURE IN A PROCESS IN VHDL
+## Chapter 23 [ [1](T23_ProcedureInProcess.vhd) [2](T23_TrafficLights.vhd) ] : HOW TO USE A PROCEDURE IN A PROCESS IN VHDL
 
 Tıpki *impure function*lar gibi **procedure**'ler de içinde bulundukları **process**lerin *signal* değişkenlerini direkt olarak kullanabilirler. Fakat tek fark *geri değer döndürmemeleridir*.
 

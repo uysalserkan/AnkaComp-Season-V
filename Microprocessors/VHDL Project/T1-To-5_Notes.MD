@@ -1,8 +1,10 @@
-# Chapter 1-5 arasında bulunan önemli olabilecek notlar.
+# Chapter 1-5 arasında bulunan önemli olabilecek notlar
 
 </br>
 
-## Chapter 2: HOW TO DELAY TIME IN VHDL: WAIT FOR
+## [Chapter 1](T01_HelloWorldTb.vhd): HELLO WORLD
+
+## [Chapter 2](T02_WaitForTb.vhd): HOW TO DELAY TIME IN VHDL: WAIT FOR
 
 `wait;` fonksiyonu direkt programı durdururken `wait for` ile belirli döngüye alabiliriz.
 
@@ -27,7 +29,7 @@ Eğer hiç `wait` fonksiyonunu kullanmazsak program **begin** ve **end process**
 
 </br>
 
-## Chapter 3: HOW TO USE LOOP AND EXIT IN VHDL
+## [Chapter 3](T03_LoopTb.vhd): HOW TO USE LOOP AND EXIT IN VHDL
 
 Programımızı `Loop` ve `End Loop;` satırları arasında tekrarlara sokabiliriz. **wait for \<saniye> <türü>;** şeklinde bitirecek olursak, bu saniye kadar loop içerisinde kalır ve daha sonra programı loop içerisinde iken bitirir, sonraki satırlara ve komutlara uğramaz. Sonraki satırlara uğramasını istersek Loop içerisinden **exit;** komutu ile çıkabiliriz.
 
@@ -41,7 +43,7 @@ Programımızı `Loop` ve `End Loop;` satırları arasında tekrarlara sokabilir
 
 </br>
 
-## Chapter 4: HOW TO USE A FOR-LOOP IN VHDL
+## [Chapter 4](T04_ForLoopTb.vhd): HOW TO USE A FOR-LOOP IN VHDL
 
 Döngümüzü belirli defa çalıştırmak istediğimizde **for loop**'unu kullanıırız.
 
@@ -62,7 +64,7 @@ Burada bulunan `<c>` değişkenin adını temsil eder, `<r>` ise bizim aralığ�
 * *`0 to 0`*: Sadece 0'ı içeren aralık.
 * *`0 to -1`*: Boş aralık vermek istediğimizde kullanırız.
 
-## Chapter 5: HOW TO USE A WHILE-LOOP IN VHDL
+## [Chapter 5](T05_WhileLoop.vhd): HOW TO USE A WHILE-LOOP IN VHDL
 
 ### **while loop Syntax**
 
@@ -81,4 +83,4 @@ end loop;
 | `<=` : Less Than or Equal     | `a nand b`: true if *a* or *b* is **false**               |
 | `>` : Greather Than           | `a nor b`: true if *a* and *b* are **false**              |
 | `>=` : Greather Than or Equal | `a xor b`: true if exactly one of *a* or *b* are **true** |
-| ` `                           | `xa xnor b`: true if *a* and *b* are **equal**            |
+| ``                           | `xa xnor b`: true if *a* and *b* are **equal**            |

@@ -1,6 +1,6 @@
 # Tutorial 6 - 11 arasında bulunan önemli olabilecek notlar
 
-## Chapter 6: HOW A SIGNAL IS DIFFERENT FROM A VARIABLE IN VHDL
+## [Chapter 6](T06_Signal.vhd): HOW A SIGNAL IS DIFFERENT FROM A VARIABLE IN VHDL
 
 Sinyal atamaları `<architecture_name> of <entity_name>` ile `begin` satırları arasında tanımlanmalıdır. Sinyaller **tüm processler tarafından erişilebilir durumundadır.**  
 
@@ -105,7 +105,7 @@ Default değer ile tanımlama ise şöyle gerçekleşir: `signal <name> : <type>
 #    Time: 100 ns  Iteration: 0  Instance: /t06_signal
 ```
 
-## Chapter 7: HOW TO USE WAIT ON AND WAIT UNTIL IN VHDL
+## [Chapter 7](T07_WaitOnUntil.vhd): HOW TO USE WAIT ON AND WAIT UNTIL IN VHDL
 
 Bu bölümde sinyallerin *birden fazla processlerde işlenme* durumu işlenmiştir.
 
@@ -156,7 +156,7 @@ Bu bölümde daha önceki bölümlerde kullandığımz `wait;` ve `wait for` kom
 #    Time: 100 ns  Iteration: 1  Instance: /t07_waitonuntil
 ```
 
-## Chapter 8: HOW TO USE CONDITIONAL STATEMENTS IN VHDL: IF-THEN-ELSIF-ELSE
+## [Chapter 8](T08_IfElse.vhd): HOW TO USE CONDITIONAL STATEMENTS IN VHDL: IF-THEN-ELSIF-ELSE
 
 *Daha önceki bölümlerde [**Mantıksa** ve **İlişkisel**](/T1-To-5_Notes.MD#tutorial-5)operatörler belirtilmiştir.*
 
@@ -206,7 +206,7 @@ end if;
 #    Time: 100 ns  Iteration: 1  Instance: /t08_ifelse
 ```
 
-## Chapter 9: HOW TO CREATE A PROCESS WITH A SENSITIVITY LIST IN VHDL
+## [Chapter 9](T09_SensitivityList.vhd): HOW TO CREATE A PROCESS WITH A SENSITIVITY LIST IN VHDL
 
 `sensitivity list` kullanmamız öneriliyor eğer bir şeyleri tetikleyeceksek. Çünkü tüm sinayllere erişmek yerine sadece parametrede belirtilen sinyaller değiştiğinde aktifleşen bir process oluyor **(fakat hala tüm signal değişkenlerine erişebilir durumdadır!)**.
 
@@ -234,7 +234,7 @@ end process;
 #    Time: 40 ns  Iteration: 1  Instance: /t09_sensitivitylist
 ```
 
-## Chapter 10: HOW TO USE THE MOST COMMON VHDL TYPE: STD_LOGIC
+## [Chapter 10](T10_StdLogic.vhd): HOW TO USE THE MOST COMMON VHDL TYPE: STD_LOGIC
 
 VHDL'de en çok kullanılan değişken tipi `STD_LOGIC`'dir muhtemelen. Bu değişken **tek bit** tutar, tıpkı bir kablonun tek bir değer içermesi gibi. `STD_LOGIC` bize *integer* değişkeninden daha fazla kontrol edilebilme imkanı sağlıyor.
 
@@ -297,7 +297,7 @@ Genel olarak **1**,**0**, **U** ve **X** değerleriyle işlemlerimizi gerçekle�
 
 ![T10-output-2]
 
-## Chapter 11: **STD_LOGIC_VECTOR**
+## [Chapter 11](T11_StdLogicVector.vhd): **STD_LOGIC_VECTOR**
 
 Bir diğer en fazla kullanılan değişken tipi `STD_LOGIC_VECTOR` değişkenidir. Bu değişken içerisinde belirlediğimiz miktarda `STD_LOGIC` değişkeni barındırıyor.
 

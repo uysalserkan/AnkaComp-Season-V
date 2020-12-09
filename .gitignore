@@ -288,4 +288,5 @@ a.out
 
 # VHDL Projects ignores
 vsim.wlf
-VHDL-Project-Env*
+VHLD-Project-Env.cr.mti
+VHLD-Project-Env.mpf

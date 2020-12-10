@@ -45,7 +45,7 @@ int main()
 int maxValue(int arr[], int size)
 { // O(N)
     int max = arr[0];
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < size + 1; i++)
         if (max < arr[i])
             max = arr[i];
 
@@ -61,7 +61,7 @@ void getCrown(int arr[], int size)
     int storage[15][15] = {0};
     int storageIndex = 0;
 
-    while (!((storageIndex == maxNumber) || (realIndex == maxNumber))) // O(N)
+    while (!((storageIndex == maxNumber + 1) || (realIndex == maxNumber + 1))) // O(N)
     {
 
         if (counter >= 50)

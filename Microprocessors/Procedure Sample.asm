@@ -1,0 +1,8 @@
+SUMS PROC
+    ADD AX, BX
+    ADD AX, CX
+    ADD AX, DX
+    RET
+SUMS ENDP
+
+CALL SUMS

@@ -45,7 +45,7 @@ end procedure;
 ```
 
 Procedure başlangıçlarını tıpkı önceden yaptığımız gibi *is* ve *begin* kullanarak işlemlerimizi gerçekleştireceğimiz yere ulaşırız.
-Parametre olarak *constants, variables, types, subtypes, ve aliases* içerebilirler fakat **signal** değerleri **içeremezler**.
+Parametre olarak *constants, variables, types, subtypes, ve aliases* içerebilirler.
 
 Fonksiyonlardan farklı olarak, procedure'ler *wait* komutu içermek **zorunda değillerdir** fakat istenildiği zaman wait komutunu kullanabilir.
 

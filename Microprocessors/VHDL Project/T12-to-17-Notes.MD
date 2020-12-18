@@ -94,7 +94,7 @@ Aslında oluşturduğumuz *modül*ü bir *unit kod VHDL* olarak düşünebiliriz
 
 Inputları veya outputları olmayan modüller *gerçek projelerde* kullanılmaz.
 
-![örnek testbench ve modül yapısı](/T15_1.svg)
+![örnek testbench ve modül yapısı](T15_1.svg)
 
 **DUT**: *Device Unter Test*
 
@@ -181,7 +181,7 @@ port map(
 
 Bir çok VHDL sistemi **clocked logic** kullanır. *Synchronous logic,  sequential logic* olarak da bilinir. Basit bir clock kullanma sistemi oluşturmak istiyorsak **flip flop** modülü oluşturabiliriz.
 
-![flip flop image](/T17_1.svg)
+![flip flop image](T17_1.svg)
 
 Eğer Flip Flop nedir diye merak ediyorsanız, [link](https://en.wikipedia.org/wiki/Flip-flop_(electronics)) üzerinden öğrenebilirsiniz.
 
@@ -206,6 +206,6 @@ end process;
 
 Oluşturduğumuz sistemin basit bir animasyonu şöyle olabilir.
 
-![animasyon](/T17_3.gif)
+![animasyon](T17_3.gif)
 
 Her 45 ns de bir aktif olan çıktı durumu ters duruma getirilir.

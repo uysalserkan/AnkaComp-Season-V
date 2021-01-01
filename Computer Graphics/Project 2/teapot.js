@@ -6,6 +6,19 @@ var indices = []; // To keep the indices of triangle vertices
 var modelViewMatrix, projectionMatrix;
 var modelViewMatrixLoc, projectionMatrixLoc;
 
+
+
+var ambientColor, diffuseColor, specularColor;
+var lightPosition = vec4(0, 0.3, 0.3, 0.0);
+var lightAmbient = vec4(0.2, 0.2, 0.2, 1.0);
+var lightDiffuse = vec4(0.8, 1.0, 1.0, 1.0);
+var lightSpecular = vec4(0.6, 1.0, 1.0, 1.0);
+
+var materialAmbient = vec4(1.0, 0.0, 1.0, 1.0);
+var materialDiffuse = vec4(1.0, 0.8, 0.0, 1.0);
+var materialSpecular = vec4(1.0, 0.8, 0.0, 1.0);
+var materialShininess = 10.0;
+
 // TEAPOT DATA
 var vertices = [ 
 	7.0000,0.0000,12.0000, 
@@ -508,52 +521,79 @@ var triangles = [
 ];
 
 window.onload = function init() {
-    canvas = document.getElementById( "gl-canvas" );
+    canvas = document.getElementById("gl-canvas");
 
-    gl = WebGLUtils.setupWebGL( canvas );
-    if ( !gl ) { alert( "WebGL isn't available" ); }
+	gl = WebGLUtils.setupWebGL(canvas);
+	if (!gl) { alert("WebGL isn't available"); }
 
-    gl.clearColor( 1.0, 1.0, 1.0, 1.0 );
-	
-	var program = initShaders( gl, "vertex-shader", "fragment-shader" );
-    gl.useProgram( program );
-	
+	gl.clearColor(1.0, 1.0, 1.0, 1.0);
+
+	var program = initShaders(gl, "vertex-shader", "fragment-shader");
+	gl.useProgram(program);
+
 	prepareTeapot();
-	
-	var vBuffer = gl.createBuffer();
-    gl.bindBuffer( gl.ARRAY_BUFFER, vBuffer);
-    gl.bufferData( gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
 
-    var vPosition = gl.getAttribLocation( program, "vPosition");
-    gl.vertexAttribPointer( vPosition, 3, gl.FLOAT, false, 0, 0);
-    gl.enableVertexAttribArray( vPosition);
-	
+	var nBuffer = gl.createBuffer();
+	gl.bindBuffer(gl.ARRAY_BUFFER, nBuffer);
+	gl.bufferData(gl.ARRAY_BUFFER, flatten(normals), gl.STATIC_DRAW);
+
+	var vNormal = gl.getAttribLocation(program, "vNormal");
+	gl.vertexAttribPointer(vNormal, 3, gl.FLOAT, false, 0, 0);
+	gl.enableVertexAttribArray(vNormal);
+
+	var vBuffer = gl.createBuffer();
+	gl.bindBuffer(gl.ARRAY_BUFFER, vBuffer);
+	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
+
+	var vPosition = gl.getAttribLocation(program, "vPosition");
+	gl.vertexAttribPointer(vPosition, 3, gl.FLOAT, false, 0, 0);
+	gl.enableVertexAttribArray(vPosition);
+
 	var iBuffer = gl.createBuffer();
 	gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, iBuffer);
 	gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint8Array(indices), gl.STATIC_DRAW);
-	
-	modelViewMatrix = rotateX(-90);
-	projectionMatrix = ortho(-20.0, 20.0, -20.0, 20.0, -20.0, 20.0);
-	
-	modelViewMatrixLoc = gl.getUniformLocation( program, "modelViewMatrix" );
-    projectionMatrixLoc = gl.getUniformLocation( program, "projectionMatrix" );
 
-    gl.uniformMatrix4fv( modelViewMatrixLoc, false, flatten(modelViewMatrix));
-	gl.uniformMatrix4fv( projectionMatrixLoc, false, flatten(projectionMatrix));
-	
-    document.getElementById("XButton").onclick = function(){
-		modelViewMatrix = mult(rotateX(5), modelViewMatrix);
-		gl.uniformMatrix4fv( modelViewMatrixLoc, false, flatten(modelViewMatrix));
+	modelViewMatrix = rotateX(-90);
+	projectionMatrix = ortho(-45.0, 45.0, -45.0, 45.0, -45.0, 45.0);
+
+	var ambientProduct = mult(lightAmbient, materialAmbient);
+	var diffuseProduct = mult(lightDiffuse, materialDiffuse);
+	var specularProduct = mult(lightSpecular, materialSpecular);
+
+	gl.uniform4fv(gl.getUniformLocation(program, "ambientProduct"),
+		flatten(ambientProduct));
+	gl.uniform4fv(gl.getUniformLocation(program, "diffuseProduct"),
+		flatten(diffuseProduct));
+	gl.uniform4fv(gl.getUniformLocation(program, "specularProduct"),
+		flatten(specularProduct));
+	gl.uniform4fv(gl.getUniformLocation(program, "lightPosition"),
+		flatten(lightPosition));
+
+	gl.uniform1f(gl.getUniformLocation(program,
+		"shininess"), materialShininess);
+
+	// gl.uniformMatrix4fv(gl.getUniformLocation(program, "projectionMatrix"),
+	// 	false, flatten(projectionMatrix));
+
+	modelViewMatrixLoc = gl.getUniformLocation(program, "modelViewMatrix");
+	projectionMatrixLoc = gl.getUniformLocation(program, "projectionMatrix");
+
+	gl.uniformMatrix4fv(modelViewMatrixLoc, false, flatten(modelViewMatrix));
+	gl.uniformMatrix4fv(projectionMatrixLoc, false, flatten(projectionMatrix));
+
+	document.getElementById("XButton").onclick = function () {
+		modelViewMatrix = mult(rotateX(15), modelViewMatrix);
+		gl.uniformMatrix4fv(modelViewMatrixLoc, false, flatten(modelViewMatrix));
 		render();
 	};
-    document.getElementById("YButton").onclick = function(){
-		modelViewMatrix = mult(rotateY(5), modelViewMatrix);
-		gl.uniformMatrix4fv( modelViewMatrixLoc, false, flatten(modelViewMatrix));
+	document.getElementById("YButton").onclick = function () {
+		modelViewMatrix = mult(rotateY(15), modelViewMatrix);
+		gl.uniformMatrix4fv(modelViewMatrixLoc, false, flatten(modelViewMatrix));
 		render();
 	};
-    document.getElementById("ZButton").onclick = function(){
-		modelViewMatrix = mult(rotateZ(5), modelViewMatrix);
-		gl.uniformMatrix4fv( modelViewMatrixLoc, false, flatten(modelViewMatrix));
+	document.getElementById("ZButton").onclick = function () {
+		modelViewMatrix = mult(rotateZ(15), modelViewMatrix);
+		gl.uniformMatrix4fv(modelViewMatrixLoc, false, flatten(modelViewMatrix));
 		render();
 	};
 
@@ -576,8 +616,8 @@ function prepareTeapot() {
 
 function render() {
 
-    gl.clear( gl.COLOR_BUFFER_BIT);
+    gl.clear( gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
     for( var i=0; i<indices.length; i+=3)
-       gl.drawElements( gl.LINE_LOOP, 3, gl.UNSIGNED_BYTE, i );
+       gl.drawElements( gl.TRIANGLES, 3, gl.UNSIGNED_BYTE, i );
 }

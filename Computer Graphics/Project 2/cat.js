@@ -16,7 +16,7 @@ var ambientProduct, diffuseProduct, specularProduct;
 var lightPosition = vec4(-1.0, -1.0, -1.0, 0.0);
 
 var ambientLight = vec4(0.2, 0.2, 0.2, 1.0);
-var lightcolor = vec4(-1.0, -1.0, -1.0, 1.0); // ışık kaynağının yönü ??
+var lightcolor = vec4(1.0, 1.0, 1.0, 1.0); // ışık kaynağının yönü ??
 
 var ambientColor = vec4(0.9, 0.0, 0.7, 1.0);
 var diffuseColor = vec4(0.9, 0.0, 0.7, 1.0);
@@ -994,9 +994,19 @@ window.onload = function init() {
 	var iBuffer = gl.createBuffer();
 	gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, iBuffer);
 	gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint8Array(indices), gl.STATIC_DRAW);
-
-	modelViewMatrix = rotateY(-90);
+	
+    
+    modelViewMatrix = rotateY(-90);
 	projectionMatrix = ortho(-45.0, 45.0, -45.0, 45.0, -45.0, 45.0);
+    
+    
+    modelViewMatrixLoc = gl.getUniformLocation(program, "modelViewMatrix");
+	projectionMatrixLoc = gl.getUniformLocation(program, "projectionMatrix");
+
+	gl.uniformMatrix4fv(modelViewMatrixLoc, false, flatten(modelViewMatrix));
+	gl.uniformMatrix4fv(projectionMatrixLoc, false, flatten(projectionMatrix));
+    
+
 
 	ambientProduct = mult(ambientLight, ambientColor);
 	diffuseProduct = mult(lightcolor, diffuseColor);
@@ -1017,11 +1027,7 @@ window.onload = function init() {
 	// gl.uniformMatrix4fv(gl.getUniformLocation(program, "projectionMatrix"),
 	// 	false, flatten(projectionMatrix));
 
-	modelViewMatrixLoc = gl.getUniformLocation(program, "modelViewMatrix");
-	projectionMatrixLoc = gl.getUniformLocation(program, "projectionMatrix");
 
-	gl.uniformMatrix4fv(modelViewMatrixLoc, false, flatten(modelViewMatrix));
-	gl.uniformMatrix4fv(projectionMatrixLoc, false, flatten(projectionMatrix));
 
 	document.getElementById("PXButton").onclick = function () {
 		modelViewMatrix = mult(rotateX(15), modelViewMatrix);

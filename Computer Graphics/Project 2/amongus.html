@@ -26,10 +26,9 @@ void main(){
         vec3 pos = -(modelViewMatrix * vPosition).xyz;
 
         // fixed light Position
-        vec3 light = lightPosition.xyz;
-        vec3 L = normalize(light - pos);
-        vec3 E = normalize(-pos);
-        vec3 H = normalize(L + E);
+        vec3 L = normalize(-lightPosition.xyz);
+        vec3 V = normalize(-pos);
+        vec3 H = normalize(L+V);
 
         vec4 NN = vec4(vNormal,0);
 

@@ -291,3 +291,8 @@ input*
 vsim.wlf
 VHLD-Project-Env.cr.mti
 VHLD-Project-Env.mpf
+
+# Computer Graphic ignores
+*.py
+*.txt
+shaded*
